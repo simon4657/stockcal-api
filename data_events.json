@@ -1,0 +1,45 @@
+[
+  {
+    "id": "11-24-bbu",
+    "date": "2025-11-24",
+    "title": "BBU 資金狂熱",
+    "market": "TW",
+    "type": "hot",
+    "trend": "bull",
+    "relatedStocks": ["AES-KY (6781)", "順達 (3211)", "新盛力 (4931)"],
+    "description": "輝達 GB200 傳出全面採用 BBU (電池備援電力模組)，資金正瘋狂湧入該族群。",
+    "strategy": "目前處於主升段，沿 5 日線操作。若爆量長黑破線則立即停利。"
+  },
+  {
+    "id": "11-25-dell",
+    "date": "2025-11-25",
+    "title": "Dell 財報公布",
+    "market": "US",
+    "type": "corporate",
+    "trend": "bull",
+    "relatedStocks": ["緯創 (3231)", "廣達 (2382)", "仁寶 (2324)"],
+    "description": "Dell 為 AI 伺服器指標。重點觀察 AI Server 訂單積壓狀況與 PC 換機潮指引。",
+    "strategy": "若 Dell 盤後大漲，隔日開盤直接關注廣達、緯創，追價意願可提高。"
+  },
+  {
+    "id": "12-10-fomc",
+    "date": "2025-12-10",
+    "title": "CPI 公布 & FOMC",
+    "market": "US",
+    "type": "critical",
+    "trend": "bear",
+    "description": "年度超級轉折日！通膨數據與 2026 點陣圖將決定美股是否修正。",
+    "strategy": "極高風險日！避免在此日前後追高熱門股，保留現金等待大盤方向。"
+  },
+  {
+    "id": "01-15-tsmc",
+    "date": "2026-01-15",
+    "title": "台積電 Q4 法說會",
+    "market": "TW",
+    "type": "critical",
+    "trend": "bull",
+    "relatedStocks": ["弘塑", "家登", "辛耘", "萬潤"],
+    "description": "全球半導體風向球。聚焦 2026 資本支出、2nm 進度與毛利率。",
+    "strategy": "若資本支出 > 380億美元，設備股將噴出。法說前押寶，法說當日視指引操作。"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "hot-1",
+    "name": "BBU 電池模組",
+    "strength": 95,
+    "trend": "up",
+    "stocks": ["AES-KY (6781)", "順達 (3211)", "新盛力 (4931)"],
+    "reason": "輝達 GB200 更改設計，BBU 成標配，資金集中度 No.1。",
+    "updatedAt": "2025-11-23"
+  },
+  {
+    "id": "hot-2",
+    "name": "CoWoS 設備股",
+    "strength": 85,
+    "trend": "up",
+    "stocks": ["弘塑 (3131)", "萬潤 (6187)", "辛耘 (3583)"],
+    "reason": "台積電 1 月法說會前押寶買盤進場，預期資本支出上修。",
+    "updatedAt": "2025-11-23"
+  },
+  {
+    "id": "hot-3",
+    "name": "集團作帳 (鴻海)",
+    "strength": 75,
+    "trend": "neutral",
+    "stocks": ["鴻準 (2354)", "正達 (3149)", "建漢 (3062)"],
+    "reason": "年底將至，鴻海集團與相關子弟兵輪動點火。",
+    "updatedAt": "2025-11-23"
+  },
+  {
+    "id": "hot-4",
+    "name": "比特幣概念",
+    "strength": 60,
+    "trend": "volatile",
+    "stocks": ["華擎 (3515)", "撼訊 (6150)"],
+    "reason": "BTC 價格波動大，板卡廠短線題材連動。",
+    "updatedAt": "2025-11-23"
+  }
+]
