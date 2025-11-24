@@ -1,10 +1,8 @@
 name: Auto Update Stock Data
-
 on:
   schedule:
     - cron: '0 0 * * *'  # 每天 8:00 AM (台北時間 )
   workflow_dispatch:
-
 jobs:
   update-data:
     runs-on: ubuntu-latest
@@ -30,5 +28,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data_hot_trends.json data_strategies.json
+          git add data_hot_trends.json data_strategies.json data_events.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update: $(date +'%Y-%m-%d %H:%M:%S')" && git push)
