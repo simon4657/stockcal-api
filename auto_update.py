@@ -2,7 +2,7 @@
 """
 StockCal 自動資料更新腳本
 每日自動生成熱點、策略和事件資料
-方案 B：完全動態生成未來 7-30 天的重要事件
+方案 B：完全動態生成未來 7-30 天的重要事件（加強台灣事件）
 """
 import json
 import os
@@ -125,7 +125,7 @@ def generate_strategies(client):
     return json.loads(text.strip())
 
 def generate_future_events(client):
-    """使用 Gemini 生成未來 7-30 天的重要事件"""
+    """使用 Gemini 生成未來 7-30 天的重要事件（加強台灣事件）"""
     
     # 計算日期範圍
     today = datetime.now()
@@ -134,8 +134,10 @@ def generate_future_events(client):
     
     prompt = f"""你是一位專業的台股分析師。請根據今天 ({TODAY}) 的市場狀況，預測未來 7-30 天內（{start_date} 到 {end_date}）可能發生的重要事件。
 
-請以 JSON 格式輸出 8-12 個事件，包含以下欄位：
-- id: 唯一識別碼 (格式: MM-DD-關鍵字，例如: 11-25-nvidia)
+**重要提醒**：請特別關注台灣本土事件，至少包含 50% 以上的台灣相關事件。
+
+請以 JSON 格式輸出 10-15 個事件，包含以下欄位：
+- id: 唯一識別碼 (格式: MM-DD-關鍵字，例如: 11-25-tsmc)
 - date: 事件日期 (YYYY-MM-DD，必須在 {start_date} 到 {end_date} 之間)
 - title: 事件標題 (簡短有力，15字內)
 - market: 市場 (TW/US/CN/Global)
@@ -148,42 +150,85 @@ def generate_future_events(client):
 範例格式：
 [
   {{
-    "id": "11-25-nvidia",
-    "date": "2025-11-25",
-    "title": "輝達 Q3 財報公布",
-    "market": "US",
+    "id": "11-28-tsmc",
+    "date": "2025-11-28",
+    "title": "台積電法說會",
+    "market": "TW",
     "type": "corporate",
     "trend": "bull",
-    "relatedStocks": ["廣達 (2382)", "緯創 (3231)", "技嘉 (2376)", "華碩 (2357)"],
-    "description": "輝達 Q3 財報將公布，市場關注 AI 晶片需求與 Blackwell 架構進展。若營收優於預期，台系供應鏈將受惠。",
-    "strategy": "若財報優於預期，隔日開盤可追價廣達、緯創等 AI 伺服器股。設定停損於 5 日線下。"
+    "relatedStocks": ["台積電 (2330)", "聯發科 (2454)", "弘塑 (3131)", "家登 (3680)"],
+    "description": "台積電召開法人說明會，公布 Q4 財報與 2026 年展望。市場關注先進製程進度、資本支出與 AI 晶片需求。",
+    "strategy": "法說前可提前布局，若展望優於預期，設備供應鏈將受惠。注意法說後外資動向。"
   }},
   {{
-    "id": "12-10-fomc",
-    "date": "2025-12-10",
-    "title": "美國 CPI 與 FOMC 會議",
-    "market": "US",
+    "id": "12-05-policy",
+    "date": "2025-12-05",
+    "title": "行政院產業政策說明",
+    "market": "TW",
     "type": "critical",
     "trend": "neutral",
-    "relatedStocks": ["台積電 (2330)", "聯發科 (2454)", "中華電 (2412)", "富邦金 (2881)"],
-    "description": "美國 11 月 CPI 數據公布，FOMC 將決定利率政策。通膨數據與升息展望將影響全球股市資金流向。",
-    "strategy": "會議前減碼高風險個股，保留現金。若降息訊號明確，可逢低布局科技股；若鷹派則觀望。"
+    "relatedStocks": ["台積電 (2330)", "聯發科 (2454)", "鴻海 (2317)", "長榮 (2603)"],
+    "description": "行政院將說明 2026 年產業發展政策，可能涉及半導體、綠能、國防等重點產業補助與稅務優惠。",
+    "strategy": "關注政策受惠產業，若有明確補助方案，相關個股可逢低布局。"
   }}
 ]
 
-請根據以下資訊生成事件：
-1. **重要財報發布**：美股科技巨頭（NVIDIA、AMD、TSMC ADR、Dell、HP、Broadcom 等）
-2. **經濟數據公布**：美國 CPI、PPI、非農就業、消費者信心指數、PMI 等
-3. **央行會議**：Fed FOMC、台灣央行理監事會議
-4. **產業重要事件**：AI 新品發表、半導體展會、電動車發表會
-5. **台股重要事件**：台積電法說會、聯發科法說會、重要除權息日
-6. **政策變動**：台灣產業政策、美國晶片法案、貿易政策
+請根據以下資訊生成事件，**務必包含大量台灣事件**：
+
+### 台灣重要事件（必須包含）：
+1. **權值股法說會**：
+   - 台積電 (2330) 法說會
+   - 聯發科 (2454) 法說會
+   - 鴻海 (2317) 法說會
+   - 台達電 (2308) 法說會
+   - 日月光投控 (3711) 法說會
+   - 大立光 (3008) 法說會
+
+2. **政府政策與會議**：
+   - 行政院產業政策說明
+   - 立法院重要法案審查（如產創條例、電業法等）
+   - 經濟部產業補助公告
+   - 國發會經濟展望報告
+   - 金管會金融政策說明
+
+3. **央行與金融**：
+   - 台灣央行理監事會議（利率決策）
+   - 金管會保險業監理會議
+   - 證交所重大宣布
+
+4. **經濟數據**：
+   - 台灣 GDP 成長率公布
+   - 外銷訂單統計
+   - PMI 指數公布
+   - 消費者物價指數 (CPI)
+   - 失業率統計
+
+5. **產業重要事件**：
+   - COMPUTEX 台北國際電腦展
+   - 半導體展覽
+   - 電動車產業論壇
+   - 綠能產業展覽
+
+6. **除權息旺季**：
+   - 重要個股除權息日（台積電、鴻海等）
+
+### 美國重要事件（也要包含）：
+1. **科技巨頭財報**：NVIDIA、AMD、Dell、HP、Broadcom、Apple
+2. **經濟數據**：CPI、PPI、非農就業、消費者信心指數、PMI
+3. **央行會議**：Fed FOMC 會議
+4. **產業事件**：AI 新品發表、半導體展會
+
+### 其他國際事件：
+1. 中國經濟數據
+2. 日本央行會議
+3. 歐洲經濟數據
 
 **注意事項**：
-- 日期必須真實合理（例如 FOMC 通常在月中，財報季在每季末）
+- 日期必須真實合理
+- 台灣事件必須佔 50% 以上
 - 事件必須具體且可能發生
 - 相關個股必須真實存在
-- 涵蓋不同類型的事件（財報、數據、政策、產業）
+- 涵蓋不同類型的事件
 - 按日期由近到遠排序
 
 只輸出 JSON 陣列，不要其他說明文字。"""
@@ -246,7 +291,7 @@ def update_data_files():
         print(f"✓ 策略資料已更新 ({len(strategies)} 項)")
         
         # 生成未來事件
-        print("正在生成未來 7-30 天的重要事件...")
+        print("正在生成未來 7-30 天的重要事件（加強台灣事件）...")
         events = generate_future_events(client)
         with open('data_events.json', 'w', encoding='utf-8') as f:
             json.dump(events, f, ensure_ascii=False, indent=2)
@@ -254,7 +299,13 @@ def update_data_files():
         
         # 顯示事件摘要
         print("\n事件摘要：")
-        for event in events[:5]:  # 只顯示前 5 個
+        tw_count = sum(1 for e in events if e['market'] == 'TW')
+        us_count = sum(1 for e in events if e['market'] == 'US')
+        print(f"  台灣事件: {tw_count} 個")
+        print(f"  美國事件: {us_count} 個")
+        print(f"  其他事件: {len(events) - tw_count - us_count} 個")
+        print("\n前 5 個事件：")
+        for event in events[:5]:
             print(f"  - {event['date']}: {event['title']} ({event['market']})")
         if len(events) > 5:
             print(f"  ... 還有 {len(events) - 5} 個事件")
