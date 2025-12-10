@@ -2,7 +2,7 @@
 """
 StockCal 自動資料更新腳本
 每日自動生成熱點、策略和事件資料
-方案 B：完全動態生成未來 7-30 天的重要事件（加強台灣事件）
+方案 B：完全動態生成當月（N）和下個月（N+1）的重要事件（加強台灣事件）
 """
 import json
 import os
@@ -125,14 +125,35 @@ def generate_strategies(client):
     return json.loads(text.strip())
 
 def generate_future_events(client):
-    """使用 Gemini 生成未來 7-30 天的重要事件（加強台灣事件）"""
+    """使用 Gemini 生成當月（N）和下個月（N+1）的重要事件（加強台灣事件）"""
     
-    # 計算日期範圍
+    # 計算日期範圍：當月第一天到下個月最後一天
     today = datetime.now()
-    start_date = (today + timedelta(days=1)).strftime('%Y-%m-%d')
-    end_date = (today + timedelta(days=30)).strftime('%Y-%m-%d')
     
-    prompt = f"""你是一位專業的台股分析師。請根據今天 ({TODAY}) 的市場狀況，預測未來 7-30 天內（{start_date} 到 {end_date}）可能發生的重要事件。
+    # 當月第一天
+    current_month_start = today.replace(day=1)
+    
+    # 下個月第一天
+    if today.month == 12:
+        next_month_start = today.replace(year=today.year + 1, month=1, day=1)
+    else:
+        next_month_start = today.replace(month=today.month + 1, day=1)
+    
+    # 下下個月第一天（用來計算下個月最後一天）
+    if next_month_start.month == 12:
+        next_next_month_start = next_month_start.replace(year=next_month_start.year + 1, month=1, day=1)
+    else:
+        next_next_month_start = next_month_start.replace(month=next_month_start.month + 1, day=1)
+    
+    # 下個月最後一天
+    next_month_end = next_next_month_start - timedelta(days=1)
+    
+    start_date = current_month_start.strftime('%Y-%m-%d')
+    end_date = next_month_end.strftime('%Y-%m-%d')
+    current_month_name = today.strftime('%Y年%m月')
+    next_month_name = next_month_start.strftime('%Y年%m月')
+    
+    prompt = f"""你是一位專業的台股分析師。請根據今天 ({TODAY}) 的市場狀況，預測 {current_month_name} 和 {next_month_name} 兩個月（{start_date} 到 {end_date}）可能發生的重要事件。
 
 **重要提醒**：請特別關注台灣本土事件，至少包含 50% 以上的台灣相關事件。
 
@@ -291,7 +312,7 @@ def update_data_files():
         print(f"✓ 策略資料已更新 ({len(strategies)} 項)")
         
         # 生成未來事件
-        print("正在生成未來 7-30 天的重要事件（加強台灣事件）...")
+        print("正在生成當月和下個月的重要事件（加強台灣事件）...")
         events = generate_future_events(client)
         with open('data_events.json', 'w', encoding='utf-8') as f:
             json.dump(events, f, ensure_ascii=False, indent=2)
