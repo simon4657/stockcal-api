@@ -24,17 +24,37 @@ def extract_json(text):
     log(f"原始回應長度: {len(text)} 字元")
     log(f"前 200 字元: {text[:200]}...")
     
-    # 移除 markdown 標記
-    if text.startswith('```json'):
-        text = text[7:]
-    elif text.startswith('```'):
-        text = text[3:]
+    # 移除說明文字，找到 JSON 開始的位置
+    # 尋找 ```json 標記
+    json_start = text.find('```json')
+    if json_start != -1:
+        text = text[json_start + 7:]  # 跳過 ```json
+    else:
+        # 尋找 ``` 標記
+        json_start = text.find('```')
+        if json_start != -1:
+            text = text[json_start + 3:]
     
-    if text.endswith('```'):
-        text = text[:-3]
+    # 移除結尾的 ```
+    json_end = text.rfind('```')
+    if json_end != -1:
+        text = text[:json_end]
+    
+    text = text.strip()
+    
+    # 如果仍然不是 JSON，嘗試尋找 [ 開始的位置
+    if not text.startswith('[') and not text.startswith('{'):
+        bracket_start = text.find('[')
+        if bracket_start != -1:
+            text = text[bracket_start:]
+        else:
+            brace_start = text.find('{')
+            if brace_start != -1:
+                text = text[brace_start:]
     
     text = text.strip()
     log(f"處理後長度: {len(text)} 字元")
+    log(f"處理後前 100 字元: {text[:100]}...")
     
     try:
         data = json.loads(text)
@@ -43,6 +63,7 @@ def extract_json(text):
     except json.JSONDecodeError as e:
         log(f"JSON 解析錯誤: {e}", "ERROR")
         log(f"錯誤位置附近: {text[max(0, e.pos-50):e.pos+50]}", "ERROR")
+        log(f"完整文本: {text}", "ERROR")
         raise
 
 def init_gemini():
