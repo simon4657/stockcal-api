@@ -1,94 +1,201 @@
 [
   {
-    "id": "1218-cpc",
+    "id": "1212-聯發科股價",
+    "date": "2025-12-12",
+    "title": "聯發科股價",
+    "market": "TW",
+    "type": "hot",
+    "trend": "bull",
+    "relatedStocks": [
+      "聯發科 (2454)"
+    ],
+    "description": "法說會前AI打亮聯發科躍上5日線。",
+    "strategy": "關注聯發科股價和法說會。"
+  },
+  {
+    "id": "1215-台灣外銷",
+    "date": "2025-12-15",
+    "title": "台灣11月外銷",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣公布 11 月外銷訂單數據。",
+    "strategy": "觀察外銷訂單數據表現。"
+  },
+  {
+    "id": "1216-台灣CPI",
+    "date": "2025-12-16",
+    "title": "台灣11月CPI",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣公布 11 月 CPI 數據。",
+    "strategy": "觀察 CPI 數據表現。"
+  },
+  {
+    "id": "1216-鴻海法說會",
+    "date": "2025-12-16",
+    "title": "鴻海法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "鴻海 (2317)"
+    ],
+    "description": "鴻海舉行法說會，說明營運狀況。",
+    "strategy": "分析法說會內容。"
+  },
+  {
+    "id": "1218-台灣央行",
     "date": "2025-12-18",
-    "title": "台灣央行理監事會議",
+    "title": "台灣央行利率",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣央行公布利率決議。",
+    "strategy": "關注央行利率決議。"
+  },
+  {
+    "id": "1218-FOMC利率",
+    "date": "2025-12-18",
+    "title": "FOMC利率決議",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "FOMC 公布利率決議。",
+    "strategy": "關注 FOMC 利率決議。"
+  },
+  {
+    "id": "1231-政府政策",
+    "date": "2025-12-31",
+    "title": "政府政策",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "關注政府可能公布的新政策。",
+    "strategy": "評估政策對股市的影響。"
+  },
+  {
+    "id": "0102-美國PMI",
+    "date": "2026-01-02",
+    "title": "美國12月PMI",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "美國公布 12 月 PMI 數據。",
+    "strategy": "觀察 PMI 數據表現。"
+  },
+  {
+    "id": "0105-鴻海營收",
+    "date": "2026-01-05",
+    "title": "鴻海12月營收",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [
-      "台積電 (2330)",
-      "聯發科 (2454)",
-      "富邦金 (2881)",
-      "國泰金 (2882)"
+      "鴻海 (2317)"
     ],
-    "description": "央行舉行理監事會議，關注利率政策、信用管制是否鬆綁，以及對房市的看法。",
-    "strategy": "留意利率變動對金融股與房地產市場的影響。"
+    "description": "鴻海公布 12 月營收。",
+    "strategy": "觀察營收表現是否符合預期。"
   },
   {
-    "id": "1218-uscpi",
-    "date": "2025-12-18",
-    "title": "美國CPI數據公布",
+    "id": "0108-美國非農",
+    "date": "2026-01-08",
+    "title": "美國12月非農",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國公布11月CPI數據，市場關注通膨是否持續降溫，影響聯準會貨幣政策。",
-    "strategy": "關注數據是否符合預期，可能影響美股與美元走勢。"
+    "description": "美國公布 12 月非農就業數據。",
+    "strategy": "關注非農就業數據表現。"
   },
   {
-    "id": "0115-uscpi",
+    "id": "0109-台灣出口",
+    "date": "2026-01-09",
+    "title": "台灣12月出口",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣公布 12 月出口數據。",
+    "strategy": "觀察出口數據表現。"
+  },
+  {
+    "id": "0114-美國CPI",
+    "date": "2026-01-14",
+    "title": "美國12月CPI",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "美國公布 12 月 CPI 數據。",
+    "strategy": "觀察 CPI 數據表現。"
+  },
+  {
+    "id": "0115-台灣外銷",
     "date": "2026-01-15",
-    "title": "美國CPI數據公布",
-    "market": "US",
+    "title": "台灣12月外銷",
+    "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國公布12月CPI數據，市場關注通膨是否持續降溫，影響聯準會貨幣政策。",
-    "strategy": "關注數據是否符合預期，可能影響美股與美元走勢。"
+    "description": "台灣公布 12 月外銷訂單數據。",
+    "strategy": "觀察外銷訂單數據表現。"
   },
   {
-    "id": "0116-tsmc",
+    "id": "0116-台積電法說",
     "date": "2026-01-16",
     "title": "台積電法說會",
     "market": "TW",
     "type": "corporate",
-    "trend": "bull",
-    "relatedStocks": [
-      "台積電 (2330)",
-      "聯發科 (2454)",
-      "弘塑 (3131)",
-      "家登 (3680)"
-    ],
-    "description": "台積電召開法人說明會，公布 Q4 2025 財報與 2026 年展望。市場關注先進製程進度、資本支出與 AI 晶片需求。",
-    "strategy": "法說前可提前布局，若展望優於預期，設備供應鏈將受惠。注意法說後外資動向。"
-  },
-  {
-    "id": "0122-twue",
-    "date": "2026-01-22",
-    "title": "台灣12月失業率",
-    "market": "TW",
-    "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台灣公布12月失業率數據，關注勞動市場是否穩定。",
-    "strategy": "數據若優於預期，有利台股多頭。"
+    "relatedStocks": [
+      "台積電 (2330)"
+    ],
+    "description": "台積電舉行法說會，說明營運展望。",
+    "strategy": "分析法說會內容，關注先進製程。"
   },
   {
-    "id": "0129-aapl",
-    "date": "2026-01-29",
-    "title": "蘋果財報公布",
+    "id": "0126-NVIDIA財報",
+    "date": "2026-01-26",
+    "title": "NVIDIA財報",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "蘋果 (AAPL)",
-      "台積電 (2330)",
-      "鴻海 (2317)",
-      "大立光 (3008)"
+      "NVIDIA (NVDA)"
     ],
-    "description": "蘋果公司發布財報，市場關注iPhone銷售、服務營收與未來展望。",
-    "strategy": "留意財報數據與蘋果對未來市場的看法，關注供應鏈廠商。"
+    "description": "NVIDIA 公布財報。",
+    "strategy": "關注財報數據與AI 展望。"
   },
   {
-    "id": "0131-twPolicy",
-    "date": "2026-01-31",
-    "title": "行政院產業政策",
+    "id": "0130-政府政策",
+    "date": "2026-01-30",
+    "title": "政府政策",
     "market": "TW",
-    "type": "hot",
+    "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "行政院可能公布新的產業政策，關注政府對重點產業的支持與發展方向。（待確認）",
-    "strategy": "留意政策受惠產業，提前布局相關個股。"
+    "description": "關注政府可能公布的新政策。",
+    "strategy": "評估政策對股市的影響。"
+  },
+  {
+    "id": "0131-聯發科法說",
+    "date": "2026-01-31",
+    "title": "聯發科法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "聯發科 (2454)"
+    ],
+    "description": "聯發科舉行法人說明會，說明營運展望。",
+    "strategy": "分析法說會內容，關注 AI 晶片發展。"
   }
 ]
