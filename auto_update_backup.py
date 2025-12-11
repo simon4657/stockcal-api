@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-StockCal 自動資料更新腳本 v2
+StockCal 自動資料更新腳本
 每日自動生成熱點、策略和事件資料
-改進：使用 Google Search Grounding 確保事件日期準確
+方案 B：完全動態生成當月（N）和下個月（N+1）的重要事件（加強台灣事件）
 """
 import json
 import os
@@ -59,10 +59,7 @@ def generate_hot_trends(client):
 
     response = client.models.generate_content(
         model='gemini-2.0-flash-exp',
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=0.7,
-        )
+        contents=prompt
     )
     
     # 提取 JSON
@@ -113,10 +110,7 @@ def generate_strategies(client):
 
     response = client.models.generate_content(
         model='gemini-2.0-flash-exp',
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=0.7,
-        )
+        contents=prompt
     )
     
     # 提取 JSON
@@ -131,7 +125,7 @@ def generate_strategies(client):
     return json.loads(text.strip())
 
 def generate_future_events(client):
-    """使用 Gemini 生成當月（N）和下個月（N+1）的重要事件，使用 Google Search 確保日期準確"""
+    """使用 Gemini 生成當月（N）和下個月（N+1）的重要事件（加強台灣事件）"""
     
     # 計算日期範圍：當月第一天到下個月最後一天
     today = datetime.now()
@@ -159,15 +153,12 @@ def generate_future_events(client):
     current_month_name = today.strftime('%Y年%m月')
     next_month_name = next_month_start.strftime('%Y年%m月')
     
-    prompt = f"""你是一位專業的台股分析師。請搜尋並預測 {current_month_name} 和 {next_month_name} 兩個月（{start_date} 到 {end_date}）可能發生的重要事件。
+    prompt = f"""你是一位專業的台股分析師。請根據今天 ({TODAY}) 的市場狀況，預測 {current_month_name} 和 {next_month_name} 兩個月（{start_date} 到 {end_date}）可能發生的重要事件。
 
-**重要提醒**：
-1. 請使用 Google Search 搜尋最新的事件日期，確保日期準確
-2. 台灣事件必須佔 50% 以上
-3. 重要事件的日期必須準確，不要猜測
+**重要提醒**：請特別關注台灣本土事件，至少包含 50% 以上的台灣相關事件。
 
 請以 JSON 格式輸出 10-15 個事件，包含以下欄位：
-- id: 唯一識別碼 (格式: MMDD-關鍵字，例如: 1225-tsmc)
+- id: 唯一識別碼 (格式: MM-DD-關鍵字，例如: 11-25-tsmc)
 - date: 事件日期 (YYYY-MM-DD，必須在 {start_date} 到 {end_date} 之間)
 - title: 事件標題 (簡短有力，15字內)
 - market: 市場 (TW/US/CN/Global)
@@ -180,49 +171,92 @@ def generate_future_events(client):
 範例格式：
 [
   {{
-    "id": "0116-tsmc",
-    "date": "2026-01-16",
+    "id": "11-28-tsmc",
+    "date": "2025-11-28",
     "title": "台積電法說會",
     "market": "TW",
     "type": "corporate",
     "trend": "bull",
     "relatedStocks": ["台積電 (2330)", "聯發科 (2454)", "弘塑 (3131)", "家登 (3680)"],
-    "description": "台積電召開法人說明會，公布 Q4 2025 財報與 2026 年展望。市場關注先進製程進度、資本支出與 AI 晶片需求。",
+    "description": "台積電召開法人說明會，公布 Q4 財報與 2026 年展望。市場關注先進製程進度、資本支出與 AI 晶片需求。",
     "strategy": "法說前可提前布局，若展望優於預期，設備供應鏈將受惠。注意法說後外資動向。"
+  }},
+  {{
+    "id": "12-05-policy",
+    "date": "2025-12-05",
+    "title": "行政院產業政策說明",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": ["台積電 (2330)", "聯發科 (2454)", "鴻海 (2317)", "長榮 (2603)"],
+    "description": "行政院將說明 2026 年產業發展政策，可能涉及半導體、綠能、國防等重點產業補助與稅務優惠。",
+    "strategy": "關注政策受惠產業，若有明確補助方案，相關個股可逢低布局。"
   }}
 ]
 
-請搜尋並包含以下類型的事件：
+請根據以下資訊生成事件，**務必包含大量台灣事件**：
 
-### 台灣重要事件（必須包含，請搜尋確認日期）：
-1. **權值股法說會**：台積電、聯發科、鴻海、台達電、日月光、大立光
-2. **政府政策**：行政院產業政策、立法院重要法案、經濟部補助公告
-3. **央行會議**：台灣央行理監事會議
-4. **經濟數據**：GDP、PMI、CPI、外銷訂單、失業率
-5. **除權息**：重要個股除權息日
+### 台灣重要事件（必須包含）：
+1. **權值股法說會**：
+   - 台積電 (2330) 法說會
+   - 聯發科 (2454) 法說會
+   - 鴻海 (2317) 法說會
+   - 台達電 (2308) 法說會
+   - 日月光投控 (3711) 法說會
+   - 大立光 (3008) 法說會
 
-### 美國重要事件（也要包含，請搜尋確認日期）：
-1. **科技財報**：NVIDIA、AMD、Dell、HP、Broadcom、Apple
-2. **經濟數據**：CPI、PPI、非農就業、PMI
-3. **Fed FOMC 會議**：請搜尋確認日期
-4. **產業事件**：AI 新品發表
+2. **政府政策與會議**：
+   - 行政院產業政策說明
+   - 立法院重要法案審查（如產創條例、電業法等）
+   - 經濟部產業補助公告
+   - 國發會經濟展望報告
+   - 金管會金融政策說明
+
+3. **央行與金融**：
+   - 台灣央行理監事會議（利率決策）
+   - 金管會保險業監理會議
+   - 證交所重大宣布
+
+4. **經濟數據**：
+   - 台灣 GDP 成長率公布
+   - 外銷訂單統計
+   - PMI 指數公布
+   - 消費者物價指數 (CPI)
+   - 失業率統計
+
+5. **產業重要事件**：
+   - COMPUTEX 台北國際電腦展
+   - 半導體展覽
+   - 電動車產業論壇
+   - 綠能產業展覽
+
+6. **除權息旺季**：
+   - 重要個股除權息日（台積電、鴻海等）
+
+### 美國重要事件（也要包含）：
+1. **科技巨頭財報**：NVIDIA、AMD、Dell、HP、Broadcom、Apple
+2. **經濟數據**：CPI、PPI、非農就業、消費者信心指數、PMI
+3. **央行會議**：Fed FOMC 會議
+4. **產業事件**：AI 新品發表、半導體展會
+
+### 其他國際事件：
+1. 中國經濟數據
+2. 日本央行會議
+3. 歐洲經濟數據
 
 **注意事項**：
-- 使用 Google Search 搜尋確認重要事件的日期
-- 如果無法確認日期，請標註「待確認」並估計大概時間
+- 日期必須真實合理
 - 台灣事件必須佔 50% 以上
+- 事件必須具體且可能發生
+- 相關個股必須真實存在
+- 涵蓋不同類型的事件
 - 按日期由近到遠排序
 
 只輸出 JSON 陣列，不要其他說明文字。"""
 
-    # 使用 Google Search Grounding
     response = client.models.generate_content(
         model='gemini-2.0-flash-exp',
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            temperature=0.3,  # 降低溫度以提高準確性
-            tools=[types.Tool(google_search=types.GoogleSearch())],  # 啟用 Google Search
-        )
+        contents=prompt
     )
     
     # 提取 JSON
@@ -257,7 +291,7 @@ def generate_future_events(client):
 def update_data_files():
     """更新資料檔案"""
     try:
-        print(f"[{datetime.now()}] 開始自動更新資料（使用 Google Search Grounding）...")
+        print(f"[{datetime.now()}] 開始自動更新資料...")
         
         # 初始化 Gemini
         client = init_gemini()
@@ -277,8 +311,8 @@ def update_data_files():
             json.dump(strategies, f, ensure_ascii=False, indent=2)
         print(f"✓ 策略資料已更新 ({len(strategies)} 項)")
         
-        # 生成未來事件（使用 Google Search）
-        print("正在生成當月和下個月的重要事件（使用 Google Search 確認日期）...")
+        # 生成未來事件
+        print("正在生成當月和下個月的重要事件（加強台灣事件）...")
         events = generate_future_events(client)
         with open('data_events.json', 'w', encoding='utf-8') as f:
             json.dump(events, f, ensure_ascii=False, indent=2)
