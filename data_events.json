@@ -1,39 +1,45 @@
 [
   {
-    "id": "12-12-fed",
-    "date": "2025-12-12",
-    "title": "FED FOMC會議",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台積電 (2330)",
-      "聯發科 (2454)",
-      "Apple (AAPL)",
-      "NVIDIA (NVDA)"
-    ],
-    "description": "美國聯準會（Fed）FOMC 會議，將決定升息或降息，影響全球股市及匯率。",
-    "strategy": "密切關注會後聲明，解讀對未來經濟及利率的看法，影響科技股及資金流向。"
-  },
-  {
-    "id": "12-15-monthlyorder",
-    "date": "2025-12-15",
-    "title": "台灣外銷訂單",
+    "id": "1218-cpc",
+    "date": "2025-12-18",
+    "title": "台灣央行理監事會議",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [
       "台積電 (2330)",
-      "鴻海 (2317)",
-      "廣達 (2382)",
-      "和碩 (4938)"
+      "聯發科 (2454)",
+      "富邦金 (2881)",
+      "國泰金 (2882)"
     ],
-    "description": "台灣公布11月外銷訂單，反應全球經濟需求，檢視電子、傳產訂單變化。",
-    "strategy": "觀察是否優於預期，影響台灣出口導向公司的營收表現。"
+    "description": "央行舉行理監事會議，關注利率政策、信用管制是否鬆綁，以及對房市的看法。",
+    "strategy": "留意利率變動對金融股與房地產市場的影響。"
   },
   {
-    "id": "12-17-tsmc",
-    "date": "2025-12-17",
+    "id": "1218-uscpi",
+    "date": "2025-12-18",
+    "title": "美國CPI數據公布",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "美國公布11月CPI數據，市場關注通膨是否持續降溫，影響聯準會貨幣政策。",
+    "strategy": "關注數據是否符合預期，可能影響美股與美元走勢。"
+  },
+  {
+    "id": "0115-uscpi",
+    "date": "2026-01-15",
+    "title": "美國CPI數據公布",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "美國公布12月CPI數據，市場關注通膨是否持續降溫，影響聯準會貨幣政策。",
+    "strategy": "關注數據是否符合預期，可能影響美股與美元走勢。"
+  },
+  {
+    "id": "0116-tsmc",
+    "date": "2026-01-16",
     "title": "台積電法說會",
     "market": "TW",
     "type": "corporate",
@@ -42,171 +48,47 @@
       "台積電 (2330)",
       "聯發科 (2454)",
       "弘塑 (3131)",
-      "家登 (3680)",
-      "ASML (ASML)"
+      "家登 (3680)"
     ],
-    "description": "台積電法說會，公布Q4財報及2026年展望，關注先進製程、AI需求、資本支出。",
-    "strategy": "法說會前可適度布局，若展望佳，半導體設備、材料供應鏈將受惠。"
+    "description": "台積電召開法人說明會，公布 Q4 2025 財報與 2026 年展望。市場關注先進製程進度、資本支出與 AI 晶片需求。",
+    "strategy": "法說前可提前布局，若展望優於預期，設備供應鏈將受惠。注意法說後外資動向。"
   },
   {
-    "id": "12-18-mediatek",
-    "date": "2025-12-18",
-    "title": "聯發科法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "bull",
-    "relatedStocks": [
-      "聯發科 (2454)",
-      "立積 (4968)",
-      "聯詠 (3034)",
-      "瑞昱 (2379)"
-    ],
-    "description": "聯發科法說會，公布Q4財報及2026年展望，聚焦手機晶片、AI、車用電子。",
-    "strategy": "關注手機市場復甦、AI晶片發展，留意相關IC設計公司的表現。"
-  },
-  {
-    "id": "12-19-honhai",
-    "date": "2025-12-19",
-    "title": "鴻海法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "鴻海 (2317)",
-      "廣宇 (2328)",
-      "臻鼎-KY (4958)",
-      "乙盛-KY (5243)"
-    ],
-    "description": "鴻海法說會，公布Q4財報及2026年展望，關注電動車、雲端伺服器、營運狀況。",
-    "strategy": "關注電動車業務發展，留意客戶需求變化。"
-  },
-  {
-    "id": "12-20-taiwan-gdp",
-    "date": "2025-12-20",
-    "title": "台灣GDP成長率",
+    "id": "0122-twue",
+    "date": "2026-01-22",
+    "title": "台灣12月失業率",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "台積電 (2330)",
-      "聯發科 (2454)",
-      "富邦金 (2881)",
-      "中華電 (2412)"
-    ],
-    "description": "公布最新台灣GDP成長率預估值，觀察經濟成長動能，影響投資信心。",
-    "strategy": "若GDP成長不如預期，可能引發股市修正。"
+    "relatedStocks": [],
+    "description": "台灣公布12月失業率數據，關注勞動市場是否穩定。",
+    "strategy": "數據若優於預期，有利台股多頭。"
   },
   {
-    "id": "12-24-taielex",
-    "date": "2025-12-24",
-    "title": "台達電法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "bull",
-    "relatedStocks": [
-      "台達電 (2308)",
-      "中興電 (1513)",
-      "亞力 (1514)",
-      "健和興 (3003)"
-    ],
-    "description": "台達電法說會，說明電動車、儲能、自動化等業務發展。",
-    "strategy": "關注綠能、電動車領域，若展望樂觀，可留意相關供應鏈。"
-  },
-  {
-    "id": "12-25-nvidia",
-    "date": "2025-12-25",
-    "title": "NVIDIA財報",
-    "market": "US",
-    "type": "corporate",
-    "trend": "bull",
-    "relatedStocks": [
-      "台積電 (2330)",
-      "日月光投控 (3711)",
-      "廣達 (2382)",
-      "技嘉 (2376)",
-      "NVIDIA (NVDA)"
-    ],
-    "description": "NVIDIA公布財報，市場關注AI晶片需求、資料中心業務成長。",
-    "strategy": "財報表現將影響整體AI概念股走勢。"
-  },
-  {
-    "id": "12-26-sunrise",
-    "date": "2025-12-26",
-    "title": "日月光投控法說",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "日月光投控 (3711)",
-      "矽品 (2325)",
-      "京元電子 (2449)",
-      "力成 (6239)"
-    ],
-    "description": "日月光投控法說會，公布Q4財報及2026年展望，聚焦先進封裝技術、營運狀況。",
-    "strategy": "關注先進封裝技術發展，留意半導體封測產業景氣。"
-  },
-  {
-    "id": "12-30-PMI",
-    "date": "2025-12-30",
-    "title": "台灣PMI指數",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台積電 (2330)",
-      "聯發科 (2454)",
-      "鴻海 (2317)",
-      "台塑 (1301)"
-    ],
-    "description": "台灣公布PMI指數，反映製造業景氣狀況，留意擴張或萎縮。",
-    "strategy": "PMI指數若低於50，顯示製造業景氣不佳，不利股市。"
-  },
-  {
-    "id": "01-05-finpol",
-    "date": "2026-01-05",
-    "title": "金管會金融政策",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "富邦金 (2881)",
-      "國泰金 (2882)",
-      "中信金 (2891)",
-      "兆豐金 (2886)"
-    ],
-    "description": "金管會公布最新金融政策，可能涉及銀行、保險、證券等產業監管。",
-    "strategy": "關注政策方向，影響金融股營運，留意監理趨嚴或鬆綁。"
-  },
-  {
-    "id": "01-10-unemployment",
-    "date": "2026-01-10",
-    "title": "台灣失業率",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "統一 (1216)",
-      "全家 (5903)",
-      "統一超 (2912)",
-      "寶雅 (5904)"
-    ],
-    "description": "台灣公布最新失業率數據，反映勞動市場狀況，影響消費信心。",
-    "strategy": "失業率若上升，不利內需消費，留意相關個股表現。"
-  },
-  {
-    "id": "01-15-apple",
-    "date": "2026-01-15",
-    "title": "Apple財報",
+    "id": "0129-aapl",
+    "date": "2026-01-29",
+    "title": "蘋果財報公布",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
+      "蘋果 (AAPL)",
       "台積電 (2330)",
       "鴻海 (2317)",
-      "大立光 (3008)",
-      "Apple (AAPL)"
+      "大立光 (3008)"
     ],
-    "description": "Apple公布財報，關注iPhone銷售、新產品發展。",
-    "strategy": "Apple財報將影響台灣供應鏈表現，留意相關個股走勢。"
+    "description": "蘋果公司發布財報，市場關注iPhone銷售、服務營收與未來展望。",
+    "strategy": "留意財報數據與蘋果對未來市場的看法，關注供應鏈廠商。"
+  },
+  {
+    "id": "0131-twPolicy",
+    "date": "2026-01-31",
+    "title": "行政院產業政策",
+    "market": "TW",
+    "type": "hot",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "行政院可能公布新的產業政策，關注政府對重點產業的支持與發展方向。（待確認）",
+    "strategy": "留意政策受惠產業，提前布局相關個股。"
   }
 ]
