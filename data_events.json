@@ -1,7 +1,40 @@
 [
   {
-    "id": "1215-台達電法說會",
-    "date": "2025-12-15",
+    "id": "1216-美國就業數據",
+    "date": "2025-12-16",
+    "title": "美國就業數據",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "公布美國就業數據，觀察勞動市場狀況。",
+    "strategy": "就業數據強勁，可能引發升息預期；反之，則可能推升股市。"
+  },
+  {
+    "id": "1214-央行理監事會",
+    "date": "2025-12-18",
+    "title": "央行理監事會議",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "央行召開理監事會議，公布經濟成長率與CPI預測，以及利率決策。",
+    "strategy": "關注利率是否調整、信用管制是否鬆綁，以及對未來經濟展望的看法。"
+  },
+  {
+    "id": "1218-央行利率",
+    "date": "2025-12-18",
+    "title": "央行利率決議",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "央行理監事會召開，外界聚焦其將公布二項關鍵數據。",
+    "strategy": "關注政策利率與選擇性信用管制動向。"
+  },
+  {
+    "id": "1220-台達電法說會",
+    "date": "2025-12-20",
     "title": "台達電法說會",
     "market": "TW",
     "type": "corporate",
@@ -9,243 +42,114 @@
     "relatedStocks": [
       "台達電 (2308)"
     ],
-    "description": "台達電舉行法說會，說明營運狀況及未來展望，聚焦AI、伺服器等領域。",
-    "strategy": "關注法說會內容，評估台達電在AI、伺服器領域的發展潛力。"
+    "description": "台達電舉行法人說明會，說明營運概況。",
+    "strategy": "關注AI伺服器電源與水冷散熱產品的展望。"
   },
   {
-    "id": "1216-CPI",
-    "date": "2025-12-16",
-    "title": "台灣11月CPI公布",
-    "market": "TW",
-    "type": "critical",
+    "id": "1226-Nvidia股息",
+    "date": "2025-12-26",
+    "title": "Nvidia發放股息",
+    "market": "US",
+    "type": "corporate",
     "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台灣11月CPI數據公布，觀察國內通膨變化。",
-    "strategy": "分析CPI數據，判斷央行貨幣政策走向。"
+    "relatedStocks": [
+      "NVIDIA (NVDA)"
+    ],
+    "description": "Nvidia發放季度現金股息。",
+    "strategy": "股息殖利率不高，對股價影響有限。"
   },
   {
-    "id": "1218-央行理監事會",
-    "date": "2025-12-18",
-    "title": "台灣央行理監事會",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台灣央行舉行理監事會議，決定利率政策及相關措施。",
-    "strategy": "關注利率決策及對房市、匯市的影響。"
-  },
-  {
-    "id": "1225-聖誕節",
-    "date": "2025-12-25",
-    "title": "聖誕節",
-    "market": "Global",
-    "type": "hot",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "全球主要市場休市或交易時間縮短。",
-    "strategy": "注意市場流動性變化。"
-  },
-  {
-    "id": "1231-封關",
+    "id": "1231-美國PCE",
     "date": "2025-12-31",
-    "title": "台股封關日",
-    "market": "TW",
-    "type": "hot",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台股2025年最後一個交易日，關注全年表現及資金動向。",
-    "strategy": "觀察封關行情及對明年展望。"
-  },
-  {
-    "id": "0102-PMI",
-    "date": "2026-01-02",
-    "title": "台灣12月PMI公布",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "追蹤台灣製造業景氣狀況。",
-    "strategy": "關注數據是否優於預期，判斷對相關產業的影響。"
-  },
-  {
-    "id": "0105-外銷訂單",
-    "date": "2026-01-05",
-    "title": "台灣12月外銷訂單",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台灣12月外銷訂單金額公布，觀察全球需求對台灣出口的影響。",
-    "strategy": "分析訂單金額變化，評估對電子、傳產等產業的影響。"
-  },
-  {
-    "id": "0108-非農就業",
-    "date": "2026-01-08",
-    "title": "美國12月非農就業",
+    "title": "美國11月PCE",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國12月非農就業數據公布，觀察勞動市場狀況。",
-    "strategy": "分析就業數據，判斷聯準會貨幣政策走向。"
+    "description": "公布美國11月個人消費支出物價指數(PCE)，聯準會關注的通膨指標。",
+    "strategy": "PCE數據高於預期，可能引發升息預期，反之則可能推升股市。"
   },
   {
-    "id": "0109-台積電法說會",
+    "id": "0105-鴻海營收",
+    "date": "2026-01-05",
+    "title": "鴻海12月營收",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "鴻海 (2317)"
+    ],
+    "description": "公布12月自結合併營收，觀察營收表現。",
+    "strategy": "留意營收年增率與產品組合變化。"
+  },
+  {
+    "id": "0106-大津町",
+    "date": "2026-01-06",
+    "title": "大津町新熱點",
+    "market": "TW",
+    "type": "hot",
+    "trend": "bull",
+    "relatedStocks": [],
+    "description": "跟著護國神山搶進熊本！ 新熱點「大津町」蓄勢爆發。",
+    "strategy": "關注相關供應鏈。"
+  },
+  {
+    "id": "0110-美國非農",
     "date": "2026-01-09",
+    "title": "美國12月非農",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "公布美國12月非農就業數據，觀察勞動市場狀況。",
+    "strategy": "非農數據優於預期，可能引發升息預期；反之，則可能推升股市。"
+  },
+  {
+    "id": "0113-美國CPI",
+    "date": "2026-01-13",
+    "title": "美國12月CPI",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "公布美國12月消費者物價指數，影響聯準會貨幣政策走向。",
+    "strategy": "CPI數據高於預期，可能引發升息預期，反之則可能推升股市。"
+  },
+  {
+    "id": "0115-台積電法說會",
+    "date": "2026-01-15",
     "title": "台積電法說會",
     "market": "TW",
     "type": "corporate",
-    "trend": "neutral",
+    "trend": "bull",
     "relatedStocks": [
       "台積電 (2330)"
     ],
-    "description": "台積電舉行法說會，說明營運狀況及未來展望，聚焦先進製程、AI需求。",
-    "strategy": "關注法說會內容，評估台積電未來發展及對供應鏈的影響。"
+    "description": "台積電舉行法人說明會，說明營運展望與資本支出計畫。",
+    "strategy": "關注先進製程需求、客戶訂單狀況，以及對未來營運的看法。"
   },
   {
-    "id": "0113-CPI",
-    "date": "2026-01-13",
-    "title": "美國12月CPI公布",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國12月CPI數據公布，觀察通膨變化。",
-    "strategy": "分析CPI數據，判斷聯準會升息或降息的可能性。"
-  },
-  {
-    "id": "0115-聯發科法說會",
-    "date": "2026-01-15",
-    "title": "聯發科法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "聯發科 (2454)"
-    ],
-    "description": "聯發科舉行法說會，說明營運狀況及未來展望，聚焦手機晶片、AI應用。",
-    "strategy": "關注法說會內容，評估聯發科在手機、AI領域的發展潛力。"
-  },
-  {
-    "id": "0116-CPI",
-    "date": "2026-01-16",
-    "title": "台灣12月CPI公布",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台灣12月CPI數據公布，觀察國內通膨變化。",
-    "strategy": "分析CPI數據，判斷央行貨幣政策走向。"
-  },
-  {
-    "id": "0121-AMD財報",
-    "date": "2026-01-21",
-    "title": "AMD財報公布",
-    "market": "US",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "AMD"
-    ],
-    "description": "AMD公布財報，關注營收、獲利及對未來展望。",
-    "strategy": "分析財報數據，評估AMD在CPU、GPU市場的競爭力。"
-  },
-  {
-    "id": "0122-FOMC",
-    "date": "2026-01-22",
-    "title": "美國FOMC會議",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國聯準會舉行FOMC會議，決定利率政策。",
-    "strategy": "關注利率決策及對全球金融市場的影響。"
-  },
-  {
-    "id": "0123-NVIDIA財報",
-    "date": "2026-01-23",
-    "title": "NVIDIA財報公布",
-    "market": "US",
-    "type": "corporate",
-    "trend": "bull",
-    "relatedStocks": [
-      "NVIDIA"
-    ],
-    "description": "NVIDIA公布財報，關注營收、獲利及對未來展望，聚焦AI晶片需求。",
-    "strategy": "分析財報數據，評估NVIDIA在AI晶片市場的領先地位。"
-  },
-  {
-    "id": "0127-Apple財報",
-    "date": "2026-01-27",
+    "id": "0130-Apple財報",
+    "date": "2026-01-30",
     "title": "Apple財報公布",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "Apple"
+      "Apple (AAPL)"
     ],
-    "description": "Apple公布財報，關注iPhone銷售、服務營收及對未來展望。",
-    "strategy": "分析財報數據，評估Apple在消費電子市場的表現。"
+    "description": "Apple公布2026財年第一季財報，關注iPhone銷售與服務業務表現。",
+    "strategy": "財報優於預期，股價可能上漲；反之，則可能下跌。"
   },
   {
-    "id": "0128-日月光法說會",
-    "date": "2026-01-28",
-    "title": "日月光法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "日月光 (3711)"
-    ],
-    "description": "日月光舉行法說會，說明營運狀況及未來展望，聚焦先進封裝技術。",
-    "strategy": "關注法說會內容，評估日月光在先進封裝領域的發展潛力。"
-  },
-  {
-    "id": "0129-台股開紅盤",
-    "date": "2026-01-29",
-    "title": "台股農曆年後開紅盤",
-    "market": "TW",
-    "type": "hot",
-    "trend": "bull",
-    "relatedStocks": [],
-    "description": "台股農曆年後開紅盤，關注資金動向及市場情緒。",
-    "strategy": "觀察開紅盤表現，判斷全年走勢。"
-  },
-  {
-    "id": "0130-美國GDP",
+    "id": "0130-美國PCE",
     "date": "2026-01-30",
-    "title": "美國Q4 GDP公布",
+    "title": "美國12月PCE",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國公布Q4 GDP數據，觀察經濟成長狀況。",
-    "strategy": "分析GDP數據，判斷聯準會貨幣政策走向。"
-  },
-  {
-    "id": "0130-台達電法說會",
-    "date": "2026-01-30",
-    "title": "台達電法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台達電 (2308)"
-    ],
-    "description": "台達電舉行法說會，說明營運狀況及未來展望，聚焦AI、伺服器等領域。",
-    "strategy": "關注法說會內容，評估台達電在AI、伺服器領域的發展潛力。"
-  },
-  {
-    "id": "0131-聯發科法說會",
-    "date": "2026-01-31",
-    "title": "聯發科法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "聯發科 (2454)"
-    ],
-    "description": "聯發科舉行法說會，說明營運狀況及未來展望，聚焦手機晶片、AI應用。",
-    "strategy": "關注法說會內容，評估聯發科在手機、AI領域的發展潛力。"
+    "description": "公布美國12月個人消費支出物價指數(PCE)，聯準會關注的通膨指標。",
+    "strategy": "PCE數據高於預期，可能引發升息預期，反之則可能推升股市。"
   }
 ]
