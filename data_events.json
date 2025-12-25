@@ -1,179 +1,140 @@
 [
   {
-    "id": "1226-NVIDIADividend",
-    "date": "2025-12-26",
-    "title": "NVIDIA發放股息",
-    "market": "US",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "NVIDIA (NVDA)"
-    ],
-    "description": "NVIDIA發放季度現金股息。",
-    "strategy": "股息發放通常對股價有正面影響。"
-  },
-  {
-    "id": "12月-台積電法說會",
-    "date": "2025-12-27",
-    "title": "台積電法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "bull",
-    "relatedStocks": [
-      "台積電 (2330)"
-    ],
-    "description": "台積電最新法說會，關注2026年AI半導體需求預估年增70%的相關訊息。",
-    "strategy": "關注CoWoS產能擴充進度與AI半導體需求。"
-  },
-  {
-    "id": "1231-TaiwanPMI",
+    "id": "1231-台灣外銷訂單",
     "date": "2025-12-31",
-    "title": "台灣12月PMI公佈",
+    "title": "台灣11月外銷訂單",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣12月製造業採購經理人指數(PMI)公佈。",
-    "strategy": "PMI若高於50，表示製造業景氣擴張。"
+    "description": "公布台灣11月外銷訂單數據，反映出口狀況。",
+    "strategy": "關注外銷訂單年增率，判斷出口動能。"
   },
   {
-    "id": "12月-聯發科法說會",
-    "date": "2025-12-31",
-    "title": "聯發科法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "bull",
-    "relatedStocks": [
-      "聯發科 (2454)"
-    ],
-    "description": "聯發科法說會，聚焦2026年營運藍圖與國際競合變局。",
-    "strategy": "關注AI PC、高階智慧型手機晶片及車用電子等三大核心領域的前瞻性規劃。"
-  },
-  {
-    "id": "0103-USPMI",
-    "date": "2026-01-03",
-    "title": "美國12月PMI公佈",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國12月製造業採購經理人指數(PMI)公佈。",
-    "strategy": "PMI若高於50，表示製造業景氣擴張。"
-  },
-  {
-    "id": "0105-FoxconnRev",
-    "date": "2026-01-05",
-    "title": "鴻海12月營收公佈",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "鴻海 (2317)"
-    ],
-    "description": "關注鴻海12月營收表現，以及全年營收是否達標。",
-    "strategy": "營收若優於預期，可視為利多。"
-  },
-  {
-    "id": "0108-USUnemployment",
-    "date": "2026-01-08",
-    "title": "美國12月非農就業",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國12月非農就業數據公佈。",
-    "strategy": "就業數據強勁，可能暗示聯準會維持較緊縮的貨幣政策。"
-  },
-  {
-    "id": "0114-USCPI",
-    "date": "2026-01-14",
-    "title": "美國12月CPI公佈",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國12月消費者物價指數(CPI)公佈。",
-    "strategy": "CPI若持續降溫，有利聯準會放緩升息步伐。"
-  },
-  {
-    "id": "0115-TaiwanExport",
-    "date": "2026-01-15",
-    "title": "台灣12月出口數據",
+    "id": "0102-台灣PMI",
+    "date": "2026-01-02",
+    "title": "台灣12月PMI公布",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣12月出口數據公佈，觀察是否延續成長趨勢。",
-    "strategy": "出口數據優於預期，有利台股表現。"
+    "description": "公布台灣12月PMI數據，反映製造業景氣狀況。",
+    "strategy": "觀察PMI是否高於50，判斷經濟擴張或收縮。"
   },
   {
-    "id": "0118-TaiwanCPI",
-    "date": "2026-01-18",
-    "title": "台灣12月CPI公佈",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台灣12月消費者物價指數(CPI)公佈。",
-    "strategy": "CPI若持續溫和，有利央行維持寬鬆貨幣政策。"
-  },
-  {
-    "id": "0128-FOMC",
-    "date": "2026-01-28",
+    "id": "0102-美國FOMC會議",
+    "date": "2026-01-02",
     "title": "美國FOMC會議",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "聯準會FOMC會議，決定利率政策。",
-    "strategy": "關注利率決議及會後聲明，判斷未來升息或降息方向。"
+    "description": "美國聯準會舉行FOMC會議，決定利率政策。",
+    "strategy": "關注利率決策與對經濟的展望。"
   },
   {
-    "id": "0129-USGDP",
-    "date": "2026-01-29",
-    "title": "美國Q4 GDP初值",
+    "id": "0105-美國非農",
+    "date": "2026-01-05",
+    "title": "美國12月非農就業",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國第四季GDP初值公佈。",
-    "strategy": "GDP數據反映經濟成長狀況，影響市場情緒。"
+    "description": "公布美國12月非農就業數據，反映勞動市場狀況。",
+    "strategy": "關注就業人數與失業率，判斷升息或降息可能性。"
   },
   {
-    "id": "0130-AppleQ1",
-    "date": "2026-01-30",
-    "title": "蘋果Q1財報",
+    "id": "0109-台灣CPI",
+    "date": "2026-01-09",
+    "title": "台灣12月CPI公布",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "公布台灣12月CPI數據，反映通貨膨脹狀況。",
+    "strategy": "關注CPI年增率，判斷央行貨幣政策走向。"
+  },
+  {
+    "id": "0112-美國CPI",
+    "date": "2026-01-12",
+    "title": "美國12月CPI公布",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "公布美國12月CPI數據，反映通貨膨脹狀況。",
+    "strategy": "關注CPI年增率，判斷聯準會貨幣政策走向。"
+  },
+  {
+    "id": "0116-台積電法說會",
+    "date": "2026-01-16",
+    "title": "台積電法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "台積電 (2330)"
+    ],
+    "description": "台積電舉行法說會，說明公司營運狀況與未來展望。",
+    "strategy": "關注法說會內容，評估先進製程需求與資本支出。"
+  },
+  {
+    "id": "0116-台灣央行人事",
+    "date": "2026-01-16",
+    "title": "台灣央行人事異動",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣央行業務局局長及資訊處處長屆齡退休，新人事生效。",
+    "strategy": "關注新人事對貨幣政策的影響。"
+  },
+  {
+    "id": "0129-Apple財報",
+    "date": "2026-01-29",
+    "title": "Apple Q1財報公布",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "Apple (AAPL)"
     ],
-    "description": "蘋果公司公佈2026財年第一季財報。",
-    "strategy": "關注iPhone銷售、服務業務和對未來展望。"
+    "description": "蘋果公司公布2026財年第一季度財報。",
+    "strategy": "關注iPhone銷售、服務營收及AI發展。"
   },
   {
-    "id": "0130-AMDReport",
+    "id": "0130-台灣外銷訂單",
     "date": "2026-01-30",
-    "title": "AMD財報",
-    "market": "US",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "AMD (AMD)"
-    ],
-    "description": "AMD公布財報",
-    "strategy": "關注資料中心和PC業務表現，以及AI晶片進展。"
-  },
-  {
-    "id": "0131-TaiwanPMI",
-    "date": "2026-01-31",
-    "title": "台灣1月PMI公佈",
+    "title": "台灣12月外銷訂單",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣1月製造業採購經理人指數(PMI)公佈。",
-    "strategy": "PMI若高於50，表示製造業景氣擴張。"
+    "description": "公布台灣12月外銷訂單數據，反映出口狀況。",
+    "strategy": "關注外銷訂單年增率，判斷出口動能。"
+  },
+  {
+    "id": "0131-聯發科法說會",
+    "date": "2026-01-31",
+    "title": "聯發科法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "聯發科 (2454)"
+    ],
+    "description": "聯發科舉行法說會，說明公司營運狀況與未來展望。",
+    "strategy": "關注法說會內容，評估手機晶片、AI PC等領域的發展。"
+  },
+  {
+    "id": "0131-美國GDP",
+    "date": "2026-01-31",
+    "title": "美國Q4 GDP公布",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "公布美國第四季度GDP數據，反映經濟成長狀況。",
+    "strategy": "關注GDP年增率，判斷經濟是否過熱或衰退。"
   }
 ]
