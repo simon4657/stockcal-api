@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Body
+from fastapi import FastAPI, HTTPException, Body, Header
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional, Literal
@@ -102,9 +102,14 @@ def extract_json_from_response(text: str) -> dict:
     return json.loads(text.strip())
 
 # AI 分析核心函數
-def generate_ai_analysis(prompt: str, feedback: Optional[str] = None):
+def generate_ai_analysis(prompt: str, api_key: Optional[str] = None, feedback: Optional[str] = None):
     """使用 Gemini 2.0 Flash Thinking 生成分析"""
-    client = init_gemini()
+    # 優先使用傳入的 API key，否則使用環境變數
+    key_to_use = api_key or GEMINI_API_KEY
+    if not key_to_use:
+        raise HTTPException(status_code=500, detail="請先在設定頁面輸入 Gemini API Key")
+    
+    client = genai.Client(api_key=key_to_use)
     if not client:
         raise HTTPException(status_code=500, detail="AI 分析服務暫時無法使用")
     
@@ -171,7 +176,7 @@ def get_strategies():
 # ============ 事件分析 ============
 
 @app.get("/api/analyze/event/{event_id}")
-def analyze_event(event_id: str):
+def analyze_event(event_id: str, x_api_key: Optional[str] = Header(None)):
     """使用 Gemini 2.0 Flash Thinking 深度分析事件"""
     events = load_json_data(EVENTS_FILE, [])
     event = next((e for e in events if e['id'] == event_id), None)
@@ -230,7 +235,7 @@ def analyze_event(event_id: str):
 
 只輸出 JSON，不要其他說明文字。"""
 
-    analysis = generate_ai_analysis(prompt)
+    analysis = generate_ai_analysis(prompt, api_key=x_api_key)
     
     return {
         "event": event,
@@ -240,7 +245,7 @@ def analyze_event(event_id: str):
     }
 
 @app.post("/api/analyze/event/{event_id}/regenerate")
-def regenerate_event_analysis(event_id: str, feedback: FeedbackRequest = Body(...)):
+def regenerate_event_analysis(event_id: str, feedback: FeedbackRequest = Body(...), x_api_key: Optional[str] = Header(None)):
     """根據使用者回饋重新生成事件分析"""
     events = load_json_data(EVENTS_FILE, [])
     event = next((e for e in events if e['id'] == event_id), None)
@@ -299,7 +304,7 @@ def regenerate_event_analysis(event_id: str, feedback: FeedbackRequest = Body(..
 
 只輸出 JSON，不要其他說明文字。"""
 
-    analysis = generate_ai_analysis(prompt, feedback.feedback)
+    analysis = generate_ai_analysis(prompt, api_key=x_api_key, feedback=feedback.feedback)
     
     return {
         "event": event,
@@ -313,7 +318,7 @@ def regenerate_event_analysis(event_id: str, feedback: FeedbackRequest = Body(..
 # ============ 熱點分析 ============
 
 @app.get("/api/analyze/hot-trend/{trend_id}")
-def analyze_hot_trend(trend_id: str):
+def analyze_hot_trend(trend_id: str, x_api_key: Optional[str] = Header(None)):
     """使用 Gemini 2.0 Flash Thinking 深度分析熱點"""
     trends = load_json_data(HOT_TRENDS_FILE, [])
     trend = next((t for t in trends if t['id'] == trend_id), None)
@@ -355,7 +360,7 @@ def analyze_hot_trend(trend_id: str):
 
 只輸出 JSON，不要其他說明文字。"""
 
-    analysis = generate_ai_analysis(prompt)
+    analysis = generate_ai_analysis(prompt, api_key=x_api_key)
     
     return {
         "trend": trend,
@@ -365,7 +370,7 @@ def analyze_hot_trend(trend_id: str):
     }
 
 @app.post("/api/analyze/hot-trend/{trend_id}/regenerate")
-def regenerate_hot_trend_analysis(trend_id: str, feedback: FeedbackRequest = Body(...)):
+def regenerate_hot_trend_analysis(trend_id: str, feedback: FeedbackRequest = Body(...), x_api_key: Optional[str] = Header(None)):
     """根據使用者回饋重新生成熱點分析"""
     trends = load_json_data(HOT_TRENDS_FILE, [])
     trend = next((t for t in trends if t['id'] == trend_id), None)
@@ -407,7 +412,7 @@ def regenerate_hot_trend_analysis(trend_id: str, feedback: FeedbackRequest = Bod
 
 只輸出 JSON，不要其他說明文字。"""
 
-    analysis = generate_ai_analysis(prompt, feedback.feedback)
+    analysis = generate_ai_analysis(prompt, api_key=x_api_key, feedback=feedback.feedback)
     
     return {
         "trend": trend,
@@ -421,7 +426,7 @@ def regenerate_hot_trend_analysis(trend_id: str, feedback: FeedbackRequest = Bod
 # ============ 策略分析 ============
 
 @app.get("/api/analyze/strategy/{strategy_id}")
-def analyze_strategy(strategy_id: str):
+def analyze_strategy(strategy_id: str, x_api_key: Optional[str] = Header(None)):
     """使用 Gemini 2.0 Flash Thinking 深度分析策略"""
     strategies = load_json_data(STRATEGIES_FILE, [])
     strategy = next((s for s in strategies if s['id'] == strategy_id), None)
@@ -465,7 +470,7 @@ def analyze_strategy(strategy_id: str):
 
 只輸出 JSON，不要其他說明文字。"""
 
-    analysis = generate_ai_analysis(prompt)
+    analysis = generate_ai_analysis(prompt, api_key=x_api_key)
     
     return {
         "strategy": strategy,
@@ -475,7 +480,7 @@ def analyze_strategy(strategy_id: str):
     }
 
 @app.post("/api/analyze/strategy/{strategy_id}/regenerate")
-def regenerate_strategy_analysis(strategy_id: str, feedback: FeedbackRequest = Body(...)):
+def regenerate_strategy_analysis(strategy_id: str, feedback: FeedbackRequest = Body(...), x_api_key: Optional[str] = Header(None)):
     """根據使用者回饋重新生成策略分析"""
     strategies = load_json_data(STRATEGIES_FILE, [])
     strategy = next((s for s in strategies if s['id'] == strategy_id), None)
@@ -519,7 +524,7 @@ def regenerate_strategy_analysis(strategy_id: str, feedback: FeedbackRequest = B
 
 只輸出 JSON，不要其他說明文字。"""
 
-    analysis = generate_ai_analysis(prompt, feedback.feedback)
+    analysis = generate_ai_analysis(prompt, api_key=x_api_key, feedback=feedback.feedback)
     
     return {
         "strategy": strategy,
