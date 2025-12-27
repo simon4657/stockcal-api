@@ -119,7 +119,7 @@ def generate_ai_analysis(prompt: str, api_key: Optional[str] = None, feedback: O
     
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',  # 使用思考型模型
+            model='gemini-2.5-pro',  # 使用思考型模型
             contents=prompt,
             config=types.GenerateContentConfig(
                 temperature=0.3,  # 降低溫度以提高準確性
@@ -138,7 +138,7 @@ def read_root():
     return {
         "message": "StockCal API v2.0",
         "version": "2.0.0",
-        "ai_model": "Gemini 2.5 Flash",
+        "ai_model": "Gemini 2.5 Pro",
         "endpoints": {
             "events": "/api/events",
             "hot_trends": "/api/hot-trends",
@@ -241,7 +241,7 @@ def analyze_event(event_id: str, x_api_key: Optional[str] = Header(None)):
         "event": event,
         "analysis": analysis,
         "generated_at": datetime.now().isoformat(),
-        "model": "gemini-2.5-flash"
+        "model": "gemini-2.5-pro"
     }
 
 @app.post("/api/analyze/event/{event_id}/regenerate")
@@ -310,7 +310,7 @@ def regenerate_event_analysis(event_id: str, feedback: FeedbackRequest = Body(..
         "event": event,
         "analysis": analysis,
         "generated_at": datetime.now().isoformat(),
-        "model": "gemini-2.5-flash",
+        "model": "gemini-2.5-pro",
         "regenerated": True,
         "feedback_applied": feedback.feedback
     }
@@ -366,7 +366,7 @@ def analyze_hot_trend(trend_id: str, x_api_key: Optional[str] = Header(None)):
         "trend": trend,
         "analysis": analysis,
         "generated_at": datetime.now().isoformat(),
-        "model": "gemini-2.5-flash"
+        "model": "gemini-2.5-pro"
     }
 
 @app.post("/api/analyze/hot-trend/{trend_id}/regenerate")
@@ -418,7 +418,7 @@ def regenerate_hot_trend_analysis(trend_id: str, feedback: FeedbackRequest = Bod
         "trend": trend,
         "analysis": analysis,
         "generated_at": datetime.now().isoformat(),
-        "model": "gemini-2.5-flash",
+        "model": "gemini-2.5-pro",
         "regenerated": True,
         "feedback_applied": feedback.feedback
     }
@@ -476,7 +476,7 @@ def analyze_strategy(strategy_id: str, x_api_key: Optional[str] = Header(None)):
         "strategy": strategy,
         "analysis": analysis,
         "generated_at": datetime.now().isoformat(),
-        "model": "gemini-2.5-flash"
+        "model": "gemini-2.5-pro"
     }
 
 @app.post("/api/analyze/strategy/{strategy_id}/regenerate")
@@ -530,7 +530,7 @@ def regenerate_strategy_analysis(strategy_id: str, feedback: FeedbackRequest = B
         "strategy": strategy,
         "analysis": analysis,
         "generated_at": datetime.now().isoformat(),
-        "model": "gemini-2.5-flash",
+        "model": "gemini-2.5-pro",
         "regenerated": True,
         "feedback_applied": feedback.feedback
     }
@@ -542,7 +542,7 @@ def health_check():
         "status": "healthy",
         "timestamp": datetime.now().isoformat(),
         "version": "2.0.0",
-        "ai_model": "gemini-2.5-flash"
+        "ai_model": "gemini-2.5-pro"
     }
 
 if __name__ == "__main__":
