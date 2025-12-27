@@ -1,103 +1,64 @@
 [
   {
-    "id": "1225-台達電法說",
+    "id": "1229-台達電法說",
     "date": "2025-12-29",
-    "title": "台達電華南永昌法說",
+    "title": "台達電法說會",
     "market": "TW",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "台達電 (2308)"
     ],
-    "description": "參加華南永昌證券舉辦的法人說明會。",
-    "strategy": "關注法說會內容，評估台達電未來展望。"
+    "description": "台達電舉行法說會，說明營運概況。",
+    "strategy": "關注法說會內容，評估台達電營運狀況。"
   },
   {
-    "id": "1231-台灣PMI",
-    "date": "2025-12-31",
+    "id": "0102-台灣PMI",
+    "date": "2026-01-02",
     "title": "台灣12月PMI公布",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "公布台灣12月製造業採購經理人指數（PMI）。",
-    "strategy": "分析PMI數據，判斷台灣經濟狀況。"
+    "description": "台灣公布12月製造業採購經理人指數 (PMI)。",
+    "strategy": "關注PMI數據，評估台灣製造業景氣。"
   },
   {
-    "id": "1231-台積電營收",
-    "date": "2025-12-31",
-    "title": "台積電12月營收",
+    "id": "1205-鴻海營收",
+    "date": "2026-01-05",
+    "title": "鴻海12月營收公布",
     "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台積電 (2330)"
-    ],
-    "description": "台積電公布12月營收。",
-    "strategy": "關注營收表現，評估對股價的影響。"
-  },
-  {
-    "id": "1231-聯發科營收",
-    "date": "2025-12-31",
-    "title": "聯發科12月營收",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "聯發科 (2454)"
-    ],
-    "description": "聯發科公布12月營收。",
-    "strategy": "關注營收表現，評估對股價的影響。"
-  },
-  {
-    "id": "1231-鴻海營收",
-    "date": "2025-12-31",
-    "title": "鴻海12月營收",
-    "market": "TW",
-    "type": "critical",
+    "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "鴻海 (2317)"
     ],
-    "description": "鴻海公布12月營收。",
-    "strategy": "關注營收表現，評估對股價的影響。"
-  },
-  {
-    "id": "1231-台達電營收",
-    "date": "2025-12-31",
-    "title": "台達電12月營收",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台達電 (2308)"
-    ],
-    "description": "台達電公布12月營收。",
-    "strategy": "關注營收表現，評估對股價的影響。"
+    "description": "鴻海公布2025年12月自結合併營收。",
+    "strategy": "分析營收數據，評估鴻海營運狀況。"
   },
   {
     "id": "0105-鴻海營收",
     "date": "2026-01-05",
     "title": "鴻海12月營收公布",
     "market": "TW",
-    "type": "critical",
+    "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "鴻海 (2317)"
     ],
-    "description": "公布2025年12月自結合併營收。",
-    "strategy": "分析營收數據，判斷鴻海營運狀況。"
+    "description": "鴻海公布2025年12月營收。",
+    "strategy": "分析營收數據，評估鴻海營運狀況。"
   },
   {
-    "id": "0109-美國CPI",
-    "date": "2026-01-09",
-    "title": "美國12月CPI公布",
-    "market": "US",
+    "id": "0107-台灣CPI",
+    "date": "2026-01-07",
+    "title": "台灣12月CPI公布",
+    "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國公布12月消費者物價指數（CPI）。",
-    "strategy": "觀察CPI變化，評估聯準會貨幣政策走向。"
+    "description": "台灣公布12月消費者物價指數 (CPI) 年增率。",
+    "strategy": "關注CPI數據，評估對央行貨幣政策的影響。"
   },
   {
     "id": "0109-美國非農",
@@ -108,117 +69,82 @@
     "trend": "neutral",
     "relatedStocks": [],
     "description": "美國公布12月非農就業數據。",
-    "strategy": "觀察數據變化，評估聯準會貨幣政策走向。"
+    "strategy": "關注非農就業數據，評估美國勞動市場狀況。"
   },
   {
-    "id": "0115-台灣CPI",
-    "date": "2026-01-15",
-    "title": "台灣12月CPI公布",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "公布台灣12月消費者物價指數（CPI）。",
-    "strategy": "觀察CPI變化，評估對央行貨幣政策的影響。"
-  },
-  {
-    "id": "0116-台積電法說",
-    "date": "2026-01-16",
-    "title": "台積電法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台積電 (2330)"
-    ],
-    "description": "台積電召開法人說明會，說明營運狀況及未來展望。",
-    "strategy": "關注法說會內容，評估對台積電股價的影響。"
-  },
-  {
-    "id": "0128-FOMC會議",
-    "date": "2026-01-28",
-    "title": "FOMC利率會議",
+    "id": "0112-美國CPI",
+    "date": "2026-01-12",
+    "title": "美國12月CPI公布",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國聯準會（FOMC）舉行利率會議，決定利率政策。",
-    "strategy": "關注利率決議及會後聲明，評估對全球股市的影響。"
+    "description": "美國公布12月消費者物價指數 (CPI)。",
+    "strategy": "關注CPI數據，評估聯準會 (Fed) 貨幣政策走向。"
   },
   {
-    "id": "0130-Apple財報",
-    "date": "2026-01-30",
-    "title": "Apple Q1財報公布",
+    "id": "0115-台積電法說會",
+    "date": "2026-01-15",
+    "title": "台積電法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "bull",
+    "relatedStocks": [
+      "台積電 (2330)"
+    ],
+    "description": "台積電舉行法說會，公布2025Q4財報及2026Q1展望，聚焦AI需求。",
+    "strategy": "關注法說會內容，評估對台積電股價的影響。"
+  },
+  {
+    "id": "0128-Apple財報",
+    "date": "2026-01-28",
+    "title": "Apple財報公布",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "Apple (AAPL)"
     ],
-    "description": "蘋果公司公布2026會計年度第一季財務報告。",
-    "strategy": "分析財報數據，評估蘋果公司營運狀況。"
+    "description": "Apple公布財報。",
+    "strategy": "分析財報數據，評估Apple營運狀況。"
   },
   {
-    "id": "0131-台灣PMI",
-    "date": "2026-01-31",
-    "title": "台灣1月PMI公布",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "公布台灣1月製造業採購經理人指數（PMI）。",
-    "strategy": "分析PMI數據，判斷台灣經濟狀況。"
-  },
-  {
-    "id": "0131-台積電營收",
-    "date": "2026-01-31",
-    "title": "台積電1月營收",
-    "market": "TW",
-    "type": "critical",
+    "id": "0129-Apple財報",
+    "date": "2026-01-29",
+    "title": "Apple財報公布",
+    "market": "US",
+    "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "台積電 (2330)"
+      "Apple (AAPL)"
     ],
-    "description": "台積電公布1月營收。",
-    "strategy": "關注營收表現，評估對股價的影響。"
+    "description": "Apple公布財報。",
+    "strategy": "分析財報數據，評估Apple營運狀況。"
   },
   {
-    "id": "0131-聯發科營收",
-    "date": "2026-01-31",
-    "title": "聯發科1月營收",
+    "id": "0129-AMD財報",
+    "date": "2026-01-29",
+    "title": "AMD財報公布",
+    "market": "US",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "AMD (AMD)"
+    ],
+    "description": "AMD公布財報。",
+    "strategy": "分析財報數據，評估AMD營運狀況。"
+  },
+  {
+    "id": "0130-聯發科法說",
+    "date": "2026-01-30",
+    "title": "聯發科法說會",
     "market": "TW",
-    "type": "critical",
+    "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "聯發科 (2454)"
     ],
-    "description": "聯發科公布1月營收。",
-    "strategy": "關注營收表現，評估對股價的影響。"
-  },
-  {
-    "id": "0131-鴻海營收",
-    "date": "2026-01-31",
-    "title": "鴻海1月營收",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "鴻海 (2317)"
-    ],
-    "description": "鴻海公布1月營收。",
-    "strategy": "關注營收表現，評估對股價的影響。"
-  },
-  {
-    "id": "0131-台達電營收",
-    "date": "2026-01-31",
-    "title": "台達電1月營收",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台達電 (2308)"
-    ],
-    "description": "台達電公布1月營收。",
-    "strategy": "關注營收表現，評估對股價的影響。"
+    "description": "聯發科舉行法說會，說明公司營運狀況與未來展望。",
+    "strategy": "關注法說會內容，評估聯發科在AI、手機晶片等領域的發展。"
   }
 ]
