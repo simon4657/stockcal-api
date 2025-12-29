@@ -1,131 +1,179 @@
 [
   {
-    "id": "1225-台達電法說會",
-    "date": "2025-12-29",
-    "title": "台達電法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台達電 (2308)"
-    ],
-    "description": "台達電參加華南永昌證券投資論壇，說明營運概況。",
-    "strategy": "關注台達電在電源管理、電動車等領域的發展。"
-  },
-  {
-    "id": "1229-台達電法說",
-    "date": "2025-12-29",
-    "title": "台達電法說會",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "台達電 (2308)"
-    ],
-    "description": "台達電舉行法人說明會，說明公司營運狀況與未來展望。",
-    "strategy": "關注法說會內容，評估台達電在AI、電動車等領域的發展。"
-  },
-  {
-    "id": "0102-台灣PMI",
-    "date": "2026-01-02",
-    "title": "台灣PMI公布",
+    "id": "1231-台灣PMI",
+    "date": "2025-12-31",
+    "title": "台灣12月PMI",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "公布台灣12月製造業採購經理人指數(PMI)。",
-    "strategy": "觀察PMI是否維持擴張趨勢。"
+    "description": "台灣公布12月製造業採購經理人指數(PMI)，觀察製造業景氣。",
+    "strategy": "評估PMI數據對台灣經濟成長的影響。"
   },
   {
-    "id": "0102-PMI",
-    "date": "2026-01-02",
-    "title": "12月製造業PMI",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "中經院將於1月2日公布12月台灣製造業採購經理人指數（PMI）",
-    "strategy": "觀察PMI是否維持擴張趨勢。"
-  },
-  {
-    "id": "1205-鴻海營收",
-    "date": "2026-01-05",
-    "title": "鴻海12月營收",
-    "market": "TW",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "鴻海 (2317)"
-    ],
-    "description": "鴻海公布2025年12月自結合併營收。",
-    "strategy": "觀察營收表現是否符合預期。"
-  },
-  {
-    "id": "0107-美國非農",
-    "date": "2026-01-09",
-    "title": "美國非農數據",
+    "id": "0101-美國PMI",
+    "date": "2026-01-01",
+    "title": "美國12月PMI",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "公布美國12月非農就業數據。",
-    "strategy": "評估就業市場對聯準會貨幣政策的影響。"
+    "description": "美國公布12月製造業採購經理人指數(PMI)，觀察製造業景氣。",
+    "strategy": "評估PMI數據對美國經濟成長的影響。"
   },
   {
-    "id": "0113-美國CPI",
-    "date": "2026-01-13",
-    "title": "美國CPI公布",
+    "id": "0102-美國非農",
+    "date": "2026-01-02",
+    "title": "美國12月非農",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "公布美國12月消費者物價指數(CPI)年增率。",
-    "strategy": "評估通膨對聯準會貨幣政策的影響。"
+    "description": "美國公布12月非農就業數據，觀察勞動市場狀況。",
+    "strategy": "評估非農數據對聯準會貨幣政策的影響。"
   },
   {
-    "id": "0120-台灣CPI",
-    "date": "2026-01-20",
-    "title": "台灣CPI公布",
+    "id": "0107-台灣CPI",
+    "date": "2026-01-07",
+    "title": "台灣12月CPI",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "公布台灣12月消費者物價指數(CPI)年增率。",
-    "strategy": "評估通膨對央行貨幣政策的影響。"
+    "description": "公布台灣12月消費者物價指數(CPI)年增率，觀察通膨變化。",
+    "strategy": "評估CPI數據對央行貨幣政策的影響。"
   },
   {
-    "id": "0121-外銷訂單",
-    "date": "2026-01-21",
-    "title": "台灣外銷訂單",
+    "id": "0108-台灣外銷訂單",
+    "date": "2026-01-08",
+    "title": "台灣12月外銷訂單",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "經濟部公布12月外銷訂單統計。",
-    "strategy": "觀察外銷訂單是否維持成長趨勢。"
+    "description": "公布台灣12月外銷訂單金額，觀察出口表現。",
+    "strategy": "評估外銷訂單對台灣經濟成長的影響。"
   },
   {
-    "id": "0128-FOMC",
+    "id": "0115-台積電法說會",
+    "date": "2026-01-15",
+    "title": "台積電法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "台積電 (2330)"
+    ],
+    "description": "台積電舉行法說會，說明公司營運狀況及未來展望。",
+    "strategy": "關注AI需求、2奈米進度、資本支出計畫。"
+  },
+  {
+    "id": "0115-美國CPI",
+    "date": "2026-01-15",
+    "title": "美國12月CPI",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "美國公布12月消費者物價指數(CPI)，觀察通膨變化。",
+    "strategy": "評估CPI數據對聯準會貨幣政策的影響。"
+  },
+  {
+    "id": "0126-NVIDIA財報",
+    "date": "2026-01-26",
+    "title": "NVIDIA財報",
+    "market": "US",
+    "type": "corporate",
+    "trend": "bull",
+    "relatedStocks": [
+      "NVIDIA (NVDA)"
+    ],
+    "description": "NVIDIA公布財報，說明公司營運狀況及未來展望。",
+    "strategy": "關注資料中心、遊戲、汽車等業務的成長動能。"
+  },
+  {
+    "id": "0128-Apple財報",
     "date": "2026-01-28",
+    "title": "Apple財報",
+    "market": "US",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "Apple (AAPL)"
+    ],
+    "description": "Apple公布財報，說明公司營運狀況及未來展望。",
+    "strategy": "關注iPhone銷售、服務業務成長、新產品發布。"
+  },
+  {
+    "id": "0129-FOMC會議",
+    "date": "2026-01-29",
     "title": "FOMC會議",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "聯準會(FOMC)舉行利率會議，決定是否調整聯邦基金利率。",
-    "strategy": "關注聯準會對經濟情勢與通膨的看法，以及利率政策的調整。"
+    "description": "美國聯準會(FOMC)舉行會議，決定利率政策。",
+    "strategy": "關注聯準會利率決策及對經濟的展望。"
   },
   {
-    "id": "0130-NVIDIA財報",
+    "id": "0130-台達電法說會",
     "date": "2026-01-30",
-    "title": "NVIDIA財報",
+    "title": "台達電法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "台達電 (2308)"
+    ],
+    "description": "台達電舉行法說會，說明公司營運狀況及未來展望。",
+    "strategy": "關注AI電源管理及液冷散熱需求。"
+  },
+  {
+    "id": "0130-AMD財報",
+    "date": "2026-01-30",
+    "title": "AMD財報",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "NVIDIA (NVDA)"
+      "AMD (AMD)"
     ],
-    "description": "NVIDIA公布2025年第四季度及全年財報。",
-    "strategy": "關注NVIDIA在AI晶片市場的表現。"
+    "description": "AMD公布財報，說明公司營運狀況及未來展望。",
+    "strategy": "關注CPU、GPU等產品的市場表現。"
+  },
+  {
+    "id": "0131-聯發科法說會",
+    "date": "2026-01-31",
+    "title": "聯發科法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "聯發科 (2454)"
+    ],
+    "description": "聯發科舉行法說會，說明公司營運狀況及未來展望。",
+    "strategy": "關注AI PC、高階智慧型手機晶片及車用電子等領域的規劃。"
+  },
+  {
+    "id": "0131-台灣GDP",
+    "date": "2026-01-31",
+    "title": "台灣Q4 GDP",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣公布2025年第四季GDP，觀察經濟成長狀況。",
+    "strategy": "評估GDP數據對台灣經濟的影響。"
+  },
+  {
+    "id": "0131-美國GDP",
+    "date": "2026-01-31",
+    "title": "美國Q4 GDP",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "美國公布2025年第四季GDP，觀察經濟成長狀況。",
+    "strategy": "評估GDP數據對美國經濟的影響。"
   }
 ]
