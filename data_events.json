@@ -1,87 +1,41 @@
 [
   {
-    "id": "0102-台灣PMI",
+    "id": "0102-PMI",
     "date": "2026-01-02",
-    "title": "台灣12月PMI",
+    "title": "台灣12月PMI公布",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣公布2025年12月製造業採購經理人指數(PMI)。",
-    "strategy": "觀察製造業景氣是否擴張。"
+    "description": "追蹤台灣製造業景氣狀況。",
+    "strategy": "關注數據變化，判斷經濟趨勢。"
   },
   {
-    "id": "0105-鴻海營收",
+    "id": "0105-FoxconnRev",
     "date": "2026-01-05",
-    "title": "鴻海12月營收",
+    "title": "鴻海12月營收公布",
     "market": "TW",
-    "type": "critical",
+    "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "鴻海 (2317)"
     ],
-    "description": "鴻海公布2025年12月自結合併營收。",
-    "strategy": "關注營收年增率變化。"
+    "description": "關注營收表現，判斷蘋果新機出貨狀況及電動車業務進展。",
+    "strategy": "分析營收數據，評估投資價值。"
   },
   {
-    "id": "0106-美國CES展",
-    "date": "2026-01-06",
-    "title": "美國CES展",
-    "market": "Global",
-    "type": "hot",
-    "trend": "bull",
-    "relatedStocks": [],
-    "description": "美國消費性電子展(CES)登場，展示最新科技趨勢。",
-    "strategy": "關注AI、電動車、元宇宙等創新應用。"
-  },
-  {
-    "id": "0109-美國非農",
-    "date": "2026-01-09",
-    "title": "美國12月非農",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國公布2025年12月非農就業數據。",
-    "strategy": "觀察就業市場是否降溫。"
-  },
-  {
-    "id": "0109-聯發科營收",
+    "id": "0110-USCPI",
     "date": "2026-01-10",
-    "title": "聯發科12月營收",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "聯發科 (2454)"
-    ],
-    "description": "聯發科公布2025年12月營收。",
-    "strategy": "關注營收年增率變化。"
-  },
-  {
-    "id": "0113-美國PPI",
-    "date": "2026-01-13",
-    "title": "美國12月PPI",
+    "title": "美國12月CPI公布",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國公布2025年12月生產者物價指數(PPI)年增率。",
-    "strategy": "觀察生產端通膨壓力。"
+    "description": "觀察美國通膨狀況，影響聯準會利率決策。",
+    "strategy": "關注數據是否符合預期。"
   },
   {
-    "id": "0109-美國CPI",
-    "date": "2026-01-14",
-    "title": "美國12月CPI",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國公布2025年12月消費者物價指數(CPI)年增率。",
-    "strategy": "觀察通膨是否符合預期。"
-  },
-  {
-    "id": "0115-台積電法說會",
+    "id": "0115-TSMC法說會",
     "date": "2026-01-15",
     "title": "台積電法說會",
     "market": "TW",
@@ -90,71 +44,82 @@
     "relatedStocks": [
       "台積電 (2330)"
     ],
-    "description": "台積電舉行法說會，公布Q4財報與Q1展望。",
-    "strategy": "關注先進製程、資本支出與AI需求。"
+    "description": "公布Q4財報及Q1展望，關注AI需求、資本支出、海外布局。",
+    "strategy": "分析法說會內容，評估投資機會。"
   },
   {
-    "id": "0115-台積電資本支出",
-    "date": "2026-01-15",
-    "title": "台積電資本支出",
-    "market": "TW",
-    "type": "critical",
-    "trend": "bull",
-    "relatedStocks": [
-      "台積電 (2330)"
-    ],
-    "description": "台積電法說會，市場預期資本支出上看500億美元。",
-    "strategy": "關注先進製程擴產計畫。"
-  },
-  {
-    "id": "0115-蘋果摺疊手機",
-    "date": "2026-01-15",
-    "title": "蘋果摺疊手機",
-    "market": "Global",
-    "type": "hot",
-    "trend": "bull",
-    "relatedStocks": [
-      "蘋果 (AAPL)"
-    ],
-    "description": "市場預期蘋果2026年將推出摺疊手機。",
-    "strategy": "關注供應鏈與創新。"
-  },
-  {
-    "id": "0120-台灣外銷訂單",
-    "date": "2026-01-20",
-    "title": "台灣12月外銷",
+    "id": "0116-CBC人事生效",
+    "date": "2026-01-16",
+    "title": "央行局處人事異動",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣公布2025年12月外銷訂單金額。",
-    "strategy": "觀察全球經濟對台灣出口的影響。"
+    "description": "業務局及資訊處處長異動生效。",
+    "strategy": "關注新任主管政策方向。"
   },
   {
-    "id": "0121-台灣CPI公布",
-    "date": "2026-01-21",
-    "title": "台灣12月CPI",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台灣公布2025年12月消費者物價指數(CPI)年增率。",
-    "strategy": "觀察通膨是否符合預期。"
+    "id": "0126-NvidiaQ4",
+    "date": "2026-01-26",
+    "title": "NVIDIA Q4財報",
+    "market": "US",
+    "type": "corporate",
+    "trend": "bull",
+    "relatedStocks": [
+      "NVIDIA (NVDA)"
+    ],
+    "description": "關注資料中心、遊戲業務表現，以及對AI市場展望。",
+    "strategy": "分析財報內容，評估投資機會。"
   },
   {
-    "id": "0127-FOMC利率決議",
-    "date": "2026-01-28",
-    "title": "FOMC利率決議",
+    "id": "0127-FOMC",
+    "date": "2026-01-27",
+    "title": "美國FOMC會議",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國聯準會FOMC會議，公布利率決議。",
-    "strategy": "關注升息或降息的幅度與未來展望。"
+    "description": "FOMC召開會議，討論貨幣政策。",
+    "strategy": "關注會議內容，判斷利率走向。"
   },
   {
-    "id": "0129-聯發科法說會",
-    "date": "2026-01-29",
+    "id": "0128-FOMC決議",
+    "date": "2026-01-28",
+    "title": "美國FOMC利率決議",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "聯準會公布利率決議，關注會後聲明及鮑爾談話。",
+    "strategy": "觀察利率政策走向，判斷美元及美股走勢。"
+  },
+  {
+    "id": "0130-AppleQ1",
+    "date": "2026-01-30",
+    "title": "Apple Q1財報",
+    "market": "US",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "Apple (AAPL)"
+    ],
+    "description": "關注iPhone銷售、服務收入、大中華區表現。",
+    "strategy": "分析財報內容，評估投資機會。"
+  },
+  {
+    "id": "0131-外銷訂單",
+    "date": "2026-01-31",
+    "title": "台灣12月外銷訂單",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "觀察台灣出口狀況，判斷經濟趨勢。",
+    "strategy": "關注數據變化，判斷經濟趨勢。"
+  },
+  {
+    "id": "0131-聯發科法說會",
+    "date": "2026-01-31",
     "title": "聯發科法說會",
     "market": "TW",
     "type": "corporate",
@@ -162,31 +127,7 @@
     "relatedStocks": [
       "聯發科 (2454)"
     ],
-    "description": "聯發科舉行法人說明會，說明最新營運狀況與展望。",
-    "strategy": "關注手機晶片、AI與車用業務。"
-  },
-  {
-    "id": "0130-美國GDP",
-    "date": "2026-01-30",
-    "title": "美國Q4 GDP",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國公布2025年第四季GDP數據。",
-    "strategy": "觀察美國經濟成長是否放緩。"
-  },
-  {
-    "id": "0131-蘋果財報",
-    "date": "2026-01-31",
-    "title": "蘋果Q1財報",
-    "market": "US",
-    "type": "corporate",
-    "trend": "neutral",
-    "relatedStocks": [
-      "蘋果 (AAPL)"
-    ],
-    "description": "蘋果公司公布2026會計年度第一季財報。",
-    "strategy": "關注iPhone銷售、服務營收與AI策略。"
+    "description": "公布Q4財報及Q1展望，關注AI PC、手機晶片、車用電子。",
+    "strategy": "分析法說會內容，評估投資機會。"
   }
 ]
