@@ -102,8 +102,9 @@ def extract_json_from_response(text: str) -> dict:
     return json.loads(text.strip())
 
 # AI 分析核心函數
+# 開放式格式，輸出 Markdown 文本
 def generate_ai_analysis(prompt: str, api_key: Optional[str] = None, feedback: Optional[str] = None):
-    """使用 Gemini 2.0 Flash Thinking 生成分析"""
+    """使用 Gemini 2.5 Pro 生成開放式分析"""
     # 優先使用傳入的 API key，否則使用環境變數
     key_to_use = api_key or GEMINI_API_KEY
     if not key_to_use:
@@ -115,19 +116,20 @@ def generate_ai_analysis(prompt: str, api_key: Optional[str] = None, feedback: O
     
     # 如果有回饋，加入到 prompt 中
     if feedback:
-        prompt += f"\n\n**使用者回饋**：{feedback}\n請根據使用者的回饋重新生成分析，修正錯誤之處。"
+        prompt += f"\n\n---\n\n**使用者回饋**：{feedback}\n\n請根據上述回饋重新生成分析，修正錯誤之處，並提供更深入的見解。"
     
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-pro',  # 使用思考型模型
+            model='gemini-2.5-pro',
             contents=prompt,
             config=types.GenerateContentConfig(
-                temperature=0.3,  # 降低溫度以提高準確性
+                temperature=0.7,  # 提高溫度以增加創意和深度
                 tools=[types.Tool(google_search=types.GoogleSearch())],
             )
         )
         
-        return extract_json_from_response(response.text)
+        # 直接返回 Markdown 文本，不需要 JSON 解析
+        return response.text.strip()
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"AI 分析失敗: {str(e)}")
@@ -184,62 +186,47 @@ def analyze_event(event_id: str, x_api_key: Optional[str] = Header(None)):
     if not event:
         raise HTTPException(status_code=404, detail="事件不存在")
     
-    prompt = f"""你是專業的財經分析師。請針對以下重要事件進行深度分析：
+        prompt = f"""你是一位資深的財經分析師，擁有豐富的市場經驗和深厚的產業知識。
 
-事件日期：{event['date']}
-事件標題：{event['title']}
-市場：{event['market']}
-事件類型：{event['type']}
-市場趨勢：{event['trend']}
-相關個股：{', '.join(event.get('relatedStocks', []))}
-事件描述：{event['description']}
-操作策略：{event['strategy']}
+請針對以下重要事件進行深入、全面的分析：
 
-請提供以下分析（以 JSON 格式輸出）：
+## 事件資訊
+- **日期**：{event['date']}
+- **標題**：{event['title']}
+- **市場**：{event['market']}
+- **類型**：{event['type']}
+- **市場趨勢**：{event['trend']}
+- **相關個股**：{', '.join(event.get('relatedStocks', []))}
+- **描述**：{event['description']}
+- **建議策略**：{event['strategy']}
 
-{{
-  "event_impact": {{
-    "short_term": "短期影響（1-2週）分析，150字內",
-    "medium_term": "中期影響（1-3個月）分析，150字內",
-    "long_term": "長期影響（3個月以上）分析，100字內"
-  }},
-  "market_reaction": {{
-    "expected_volatility": "預期波動程度（高/中/低）",
-    "key_indicators": ["關鍵指標1", "關鍵指標2", "關鍵指標3"],
-    "sentiment": "市場情緒預測（樂觀/謹慎/悲觀）"
-  }},
-  "trading_strategy": {{
-    "before_event": "事件前操作建議（100字內）",
-    "during_event": "事件當天操作建議（100字內）",
-    "after_event": "事件後操作建議（100字內）",
-    "risk_control": "風險控制要點（80字內）"
-  }},
-  "affected_sectors": [
-    {{
-      "sector": "受影響產業",
-      "impact": "影響程度（正面/負面/中性）",
-      "reason": "影響原因（50字內）"
-    }}
-  ],
-  "key_stocks_to_watch": [
-    {{
-      "name": "個股名稱 (代碼)",
-      "action": "操作建議（買入/持有/觀望/賣出）",
-      "reason": "推薦原因（50字內）",
-      "target_price": "目標價位或漲跌幅預估"
-    }}
-  ],
-  "historical_reference": "歷史類似事件參考（100字內）",
-  "confidence_level": "分析信心度（高/中/低）"
-}}
+## 分析要求
 
-只輸出 JSON，不要其他說明文字。"""
+請以專業分析師的角度，自由發揮地提供深入分析。不需要拘泥於固定格式，請根據事件特性選擇最適合的分析角度和內容。
+
+建議可以涵蓋（但不限於）以下面向：
+
+1. **事件解讀與背景** - 這個事件的核心意義、經濟邏輯、與總體經濟環境的關聯
+2. **市場影響分析** - 對股市、匯市、債市的影響，短中長期影響路徑，產業鏈波及效應
+3. **投資機會與風險** - 具體投資機會、風險點、進場時機、倉位配置、停損停利建議
+4. **個股深度分析** - 重點個股的基本面變化、技術面支撐壓力、估值分析、目標價位
+5. **歷史經驗與前瞻** - 過去類似事件的市場反應、這次的不同之處、未來發展情境
+
+## 寫作要求
+- 使用 Markdown 格式，包含清晰的標題和段落
+- 提供具體的數據、價位、時間點
+- 避免過於籠統的描述
+- 可以大膽提出觀點，但要說明理由
+- 篇幅不限，請充分展開分析
+
+請開始你的深度分析："""
 
     analysis = generate_ai_analysis(prompt, api_key=x_api_key)
     
     return {
         "event": event,
         "analysis": analysis,
+        "format": "markdown",
         "generated_at": datetime.now().isoformat(),
         "model": "gemini-2.5-pro"
     }
@@ -253,62 +240,47 @@ def regenerate_event_analysis(event_id: str, feedback: FeedbackRequest = Body(..
     if not event:
         raise HTTPException(status_code=404, detail="事件不存在")
     
-    prompt = f"""你是專業的財經分析師。請針對以下重要事件進行深度分析：
+        prompt = f"""你是一位資深的財經分析師，擁有豐富的市場經驗和深厚的產業知識。
 
-事件日期：{event['date']}
-事件標題：{event['title']}
-市場：{event['market']}
-事件類型：{event['type']}
-市場趨勢：{event['trend']}
-相關個股：{', '.join(event.get('relatedStocks', []))}
-事件描述：{event['description']}
-操作策略：{event['strategy']}
+請針對以下重要事件進行深入、全面的分析：
 
-請提供以下分析（以 JSON 格式輸出）：
+## 事件資訊
+- **日期**：{event['date']}
+- **標題**：{event['title']}
+- **市場**：{event['market']}
+- **類型**：{event['type']}
+- **市場趨勢**：{event['trend']}
+- **相關個股**：{', '.join(event.get('relatedStocks', []))}
+- **描述**：{event['description']}
+- **建議策略**：{event['strategy']}
 
-{{
-  "event_impact": {{
-    "short_term": "短期影響（1-2週）分析，150字內",
-    "medium_term": "中期影響（1-3個月）分析，150字內",
-    "long_term": "長期影響（3個月以上）分析，100字內"
-  }},
-  "market_reaction": {{
-    "expected_volatility": "預期波動程度（高/中/低）",
-    "key_indicators": ["關鍵指標1", "關鍵指標2", "關鍵指標3"],
-    "sentiment": "市場情緒預測（樂觀/謹慎/悲觀）"
-  }},
-  "trading_strategy": {{
-    "before_event": "事件前操作建議（100字內）",
-    "during_event": "事件當天操作建議（100字內）",
-    "after_event": "事件後操作建議（100字內）",
-    "risk_control": "風險控制要點（80字內）"
-  }},
-  "affected_sectors": [
-    {{
-      "sector": "受影響產業",
-      "impact": "影響程度（正面/負面/中性）",
-      "reason": "影響原因（50字內）"
-    }}
-  ],
-  "key_stocks_to_watch": [
-    {{
-      "name": "個股名稱 (代碼)",
-      "action": "操作建議（買入/持有/觀望/賣出）",
-      "reason": "推薦原因（50字內）",
-      "target_price": "目標價位或漲跌幅預估"
-    }}
-  ],
-  "historical_reference": "歷史類似事件參考（100字內）",
-  "confidence_level": "分析信心度（高/中/低）"
-}}
+## 分析要求
 
-只輸出 JSON，不要其他說明文字。"""
+請以專業分析師的角度，自由發揮地提供深入分析。不需要拘泥於固定格式，請根據事件特性選擇最適合的分析角度和內容。
+
+建議可以涵蓋（但不限於）以下面向：
+
+1. **事件解讀與背景** - 這個事件的核心意義、經濟邏輯、與總體經濟環境的關聯
+2. **市場影響分析** - 對股市、匯市、債市的影響，短中長期影響路徑，產業鏈波及效應
+3. **投資機會與風險** - 具體投資機會、風險點、進場時機、倉位配置、停損停利建議
+4. **個股深度分析** - 重點個股的基本面變化、技術面支撐壓力、估值分析、目標價位
+5. **歷史經驗與前瞻** - 過去類似事件的市場反應、這次的不同之處、未來發展情境
+
+## 寫作要求
+- 使用 Markdown 格式，包含清晰的標題和段落
+- 提供具體的數據、價位、時間點
+- 避免過於籠統的描述
+- 可以大膽提出觀點，但要說明理由
+- 篇幅不限，請充分展開分析
+
+請開始你的深度分析："""
 
     analysis = generate_ai_analysis(prompt, api_key=x_api_key, feedback=feedback.feedback)
     
     return {
         "event": event,
         "analysis": analysis,
+        "format": "markdown",
         "generated_at": datetime.now().isoformat(),
         "model": "gemini-2.5-pro",
         "regenerated": True,
@@ -365,6 +337,7 @@ def analyze_hot_trend(trend_id: str, x_api_key: Optional[str] = Header(None)):
     return {
         "trend": trend,
         "analysis": analysis,
+        "format": "markdown",
         "generated_at": datetime.now().isoformat(),
         "model": "gemini-2.5-pro"
     }
@@ -417,6 +390,7 @@ def regenerate_hot_trend_analysis(trend_id: str, feedback: FeedbackRequest = Bod
     return {
         "trend": trend,
         "analysis": analysis,
+        "format": "markdown",
         "generated_at": datetime.now().isoformat(),
         "model": "gemini-2.5-pro",
         "regenerated": True,
@@ -475,6 +449,7 @@ def analyze_strategy(strategy_id: str, x_api_key: Optional[str] = Header(None)):
     return {
         "strategy": strategy,
         "analysis": analysis,
+        "format": "markdown",
         "generated_at": datetime.now().isoformat(),
         "model": "gemini-2.5-pro"
     }
@@ -529,6 +504,7 @@ def regenerate_strategy_analysis(strategy_id: str, feedback: FeedbackRequest = B
     return {
         "strategy": strategy,
         "analysis": analysis,
+        "format": "markdown",
         "generated_at": datetime.now().isoformat(),
         "model": "gemini-2.5-pro",
         "regenerated": True,
