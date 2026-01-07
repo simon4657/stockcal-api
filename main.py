@@ -186,7 +186,7 @@ def analyze_event(event_id: str, x_api_key: Optional[str] = Header(None)):
     if not event:
         raise HTTPException(status_code=404, detail="事件不存在")
     
-        prompt = f"""你是一位資深的財經分析師，擁有豐富的市場經驗和深厚的產業知識。
+    prompt = f"""你是一位資深的財經分析師，擁有豐富的市場經驗和深厚的產業知識。
 
 請針對以下重要事件進行深入、全面的分析：
 
@@ -240,7 +240,7 @@ def regenerate_event_analysis(event_id: str, feedback: FeedbackRequest = Body(..
     if not event:
         raise HTTPException(status_code=404, detail="事件不存在")
     
-        prompt = f"""你是一位資深的財經分析師，擁有豐富的市場經驗和深厚的產業知識。
+    prompt = f"""你是一位資深的財經分析師，擁有豐富的市場經驗和深厚的產業知識。
 
 請針對以下重要事件進行深入、全面的分析：
 
