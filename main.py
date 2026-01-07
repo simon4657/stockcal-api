@@ -298,39 +298,38 @@ def analyze_hot_trend(trend_id: str, x_api_key: Optional[str] = Header(None)):
     if not trend:
         raise HTTPException(status_code=404, detail="熱點不存在")
     
-    prompt = f"""你是專業的台股分析師。請針對以下熱點族群進行深度分析：
+    prompt = f"""你是一位資深的台股分析師，擁有豐富的市場經驗和深厚的產業知識。
 
-族群名稱：{trend['name']}
-資金強度：{trend['strength']}/100
-趨勢：{trend['trend']}
-相關個股：{', '.join(trend['stocks'])}
-熱點原因：{trend['reason']}
+請針對以下熱點族群進行深入、全面的分析：
 
-請提供以下分析（以 JSON 格式輸出）：
+## 熱點資訊
+- **族群名稱**：{trend['name']}
+- **資金強度**：{trend['strength']}/100
+- **趋勢**：{trend['trend']}
+- **相關個股**：{', '.join(trend['stocks'])}
+- **熱點原因**：{trend['reason']}
 
-{{
-  "technical_analysis": "技術面分析（支撐壓力、趨勢判斷、量價關係，150字內）",
-  "fundamental_analysis": "基本面分析（產業前景、競爭優勢、成長動能，150字內）",
-  "risk_assessment": "風險評估（潛在風險、注意事項，100字內）",
-  "trading_suggestion": {{
-    "entry_point": "建議進場點位或時機",
-    "stop_loss": "停損建議",
-    "take_profit": "停利建議",
-    "holding_period": "建議持有期間"
-  }},
-  "key_stocks": [
-    {{
-      "name": "個股名稱 (代碼)",
-      "reason": "推薦原因（50字內）",
-      "rating": "評級（強力推薦/推薦/中性）",
-      "entry_price": "建議進場價位"
-    }}
-  ],
-  "market_outlook": "市場展望（100字內）",
-  "confidence_level": "分析信心度（高/中/低）"
-}}
+## 分析要求
 
-只輸出 JSON，不要其他說明文字。"""
+請以專業分析師的角度，自由發揮地提供深入分析。不需要拘泥於固定格式，請根據熱點特性選擇最適合的分析角度和內容。
+
+建議可以涵蓋（但不限於）以下面向：
+
+1. **產業趨勢與背景** - 這個熱點的形成原因、產業連結、與總體經濟的關聯
+2. **技術面與資金面** - 資金流向、量價關係、支撐壓力、技術型態
+3. **基本面分析** - 產業前景、競爭格局、成長動能、獲利能力
+4. **重點個股深度剖析** - 選股邏輯、基本面變化、技術面位置、估值分析、目標價
+5. **風險與機會** - 潛在風險、注意事項、投資機會、進場時機
+6. **操作策略** - 進出場時機、個位配置、停損停利、持有期間
+
+## 寫作要求
+- 使用 Markdown 格式，包含清晰的標題和段落
+- 提供具體的數據、價位、時間點
+- 避免過於籠統的描述
+- 可以大膽提出觀點，但要說明理由
+- 篇幅不限，請充分展開分析
+
+請開始你的深度分析："""
 
     analysis = generate_ai_analysis(prompt, api_key=x_api_key)
     
@@ -408,41 +407,40 @@ def analyze_strategy(strategy_id: str, x_api_key: Optional[str] = Header(None)):
     if not strategy:
         raise HTTPException(status_code=404, detail="策略不存在")
     
-    prompt = f"""你是專業的台股操盤手。請針對以下操作策略進行深度分析：
+    prompt = f"""你是一位資深的台股操盤手，擁有多年的實戰經驗和穩健的獲利紀錄。
 
-策略標題：{strategy['title']}
-策略類型：{strategy['type']}
-策略描述：{strategy['desc']}
-風險等級：{strategy['risk']}
-關注目標：{strategy['target']}
+請針對以下操作策略進行深入、實用的分析：
 
-請提供以下分析（以 JSON 格式輸出）：
+## 策略資訊
+- **策略標題**：{strategy['title']}
+- **策略類型**：{strategy['type']}
+- **策略描述**：{strategy['desc']}
+- **風險等級**：{strategy['risk']}
+- **關注目標**：{strategy['target']}
 
-{{
-  "strategy_rationale": "策略原理（為什麼這個策略適合當前市場，150字內）",
-  "execution_details": {{
-    "entry_timing": "具體進場時機（何時進場最佳）",
-    "position_sizing": "倉位配置建議（如何分配資金）",
-    "exit_strategy": "出場策略（何時獲利了結或停損）"
-  }},
-  "risk_management": {{
-    "max_loss": "最大可能虧損",
-    "hedge_method": "風險對沖方法",
-    "warning_signs": "需要警惕的訊號"
-  }},
-  "historical_performance": "歷史表現（類似情況下的成功案例，100字內）",
-  "success_probability": "成功機率評估（高/中/低）",
-  "alternative_strategies": [
-    {{
-      "name": "替代策略名稱",
-      "description": "簡短描述（50字內）"
-    }}
-  ],
-  "market_conditions": "適用的市場條件（80字內）",
-  "confidence_level": "分析信心度（高/中/低）"
-}}
+## 分析要求
 
-只輸出 JSON，不要其他說明文字。"""
+請以實戰操盤手的角度，自由發揮地提供深入分析。不需要拘泥於固定格式，請根據策略特性選擇最適合的分析角度和內容。
+
+建議可以涵蓋（但不限於）以下面向：
+
+1. **策略原理與逻輯** - 為什麼這個策略適合當前市場、理論基礎、歷史驗證
+2. **具體執行步驟** - 進場時機、位置選擇、倉位配置、分批進場計劃
+3. **風險控制與資金管理** - 停損設定、最大虧損、資金分配、對沖方法
+4. **出場策略** - 獲利了結時機、停利設定、分批出場、移動停損
+5. **成功關鍵與警示訊號** - 策略成功的關鍵因素、需要警惕的訊號、失敗警訊
+6. **歷史案例與成功率** - 類似情況的歷史表現、成功率評估、經驗教訓
+7. **適用市場條件** - 什麼市場環境下最適合、不適合的情況
+8. **替代方案** - 其他可行的策略選擇、優劣勢比較
+
+## 寫作要求
+- 使用 Markdown 格式，包含清晰的標題和段落
+- 提供具體的數據、價位、百分比
+- 分享實戰經驗和具體案例
+- 避免理論化的空洞建議
+- 篇幅不限，請充分展開分析
+
+請開始你的實戰策略分析："""
 
     analysis = generate_ai_analysis(prompt, api_key=x_api_key)
     
@@ -463,41 +461,40 @@ def regenerate_strategy_analysis(strategy_id: str, feedback: FeedbackRequest = B
     if not strategy:
         raise HTTPException(status_code=404, detail="策略不存在")
     
-    prompt = f"""你是專業的台股操盤手。請針對以下操作策略進行深度分析：
+    prompt = f"""你是一位資深的台股操盤手，擁有多年的實戰經驗和穩健的獲利紀錄。
 
-策略標題：{strategy['title']}
-策略類型：{strategy['type']}
-策略描述：{strategy['desc']}
-風險等級：{strategy['risk']}
-關注目標：{strategy['target']}
+請針對以下操作策略進行深入、實用的分析：
 
-請提供以下分析（以 JSON 格式輸出）：
+## 策略資訊
+- **策略標題**：{strategy['title']}
+- **策略類型**：{strategy['type']}
+- **策略描述**：{strategy['desc']}
+- **風險等級**：{strategy['risk']}
+- **關注目標**：{strategy['target']}
 
-{{
-  "strategy_rationale": "策略原理（為什麼這個策略適合當前市場，150字內）",
-  "execution_details": {{
-    "entry_timing": "具體進場時機（何時進場最佳）",
-    "position_sizing": "倉位配置建議（如何分配資金）",
-    "exit_strategy": "出場策略（何時獲利了結或停損）"
-  }},
-  "risk_management": {{
-    "max_loss": "最大可能虧損",
-    "hedge_method": "風險對沖方法",
-    "warning_signs": "需要警惕的訊號"
-  }},
-  "historical_performance": "歷史表現（類似情況下的成功案例，100字內）",
-  "success_probability": "成功機率評估（高/中/低）",
-  "alternative_strategies": [
-    {{
-      "name": "替代策略名稱",
-      "description": "簡短描述（50字內）"
-    }}
-  ],
-  "market_conditions": "適用的市場條件（80字內）",
-  "confidence_level": "分析信心度（高/中/低）"
-}}
+## 分析要求
 
-只輸出 JSON，不要其他說明文字。"""
+請以實戰操盤手的角度，自由發揮地提供深入分析。不需要拘泥於固定格式，請根據策略特性選擇最適合的分析角度和內容。
+
+建議可以涵蓋（但不限於）以下面向：
+
+1. **策略原理與逻輯** - 為什麼這個策略適合當前市場、理論基礎、歷史驗證
+2. **具體執行步驟** - 進場時機、位置選擇、倉位配置、分批進場計劃
+3. **風險控制與資金管理** - 停損設定、最大虧損、資金分配、對沖方法
+4. **出場策略** - 獲利了結時機、停利設定、分批出場、移動停損
+5. **成功關鍵與警示訊號** - 策略成功的關鍵因素、需要警惕的訊號、失敗警訊
+6. **歷史案例與成功率** - 類似情況的歷史表現、成功率評估、經驗教訓
+7. **適用市場條件** - 什麼市場環境下最適合、不適合的情況
+8. **替代方案** - 其他可行的策略選擇、優劣勢比較
+
+## 寫作要求
+- 使用 Markdown 格式，包含清晰的標題和段落
+- 提供具體的數據、價位、百分比
+- 分享實戰經驗和具體案例
+- 避免理論化的空洞建議
+- 篇幅不限，請充分展開分析
+
+請開始你的實戰策略分析："""
 
     analysis = generate_ai_analysis(prompt, api_key=x_api_key, feedback=feedback.feedback)
     
