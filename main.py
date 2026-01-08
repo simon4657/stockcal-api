@@ -508,6 +508,99 @@ def regenerate_strategy_analysis(strategy_id: str, feedback: FeedbackRequest = B
         "feedback_applied": feedback.feedback
     }
 
+class WatchlistRequest(BaseModel):
+    stocks: List[str]
+
+@app.post("/api/watchlist/events")
+def get_watchlist_events(request: WatchlistRequest, x_api_key: Optional[str] = Header(None)):
+    """獲取自選個股的重要事件（使用 AI 搜尋）"""
+    
+    if not request.stocks or len(request.stocks) == 0:
+        return {"events": []}
+    
+    # 限制最多 10 個股票
+    stocks = request.stocks[:10]
+    
+    # 使用 Gemini API Key
+    api_key = x_api_key or os.getenv('GEMINI_API_KEY')
+    if not api_key:
+        raise HTTPException(status_code=500, detail="API Key 未設定")
+    
+    try:
+        client = genai.Client(api_key=api_key)
+        
+        # 為每個股票搜尋資訊
+        all_events = []
+        
+        for stock in stocks:
+            prompt = f"""請搜尋並提供「{stock}」這檔台股在 2026 年 1-3 月的重要事件資訊。
+
+請以 JSON 格式輸出，包含以下欄位：
+
+{{
+  "stock": "股票代號或名稱",
+  "events": [
+    {{
+      "date": "YYYY-MM-DD",
+      "title": "事件標題",
+      "type": "earnings|除權息|stockholder_meeting|conference",
+      "description": "簡短描述"
+    }}
+  ]
+}}
+
+請只輸出 JSON，不要其他文字。如果找不到資訊，請返回空陣列。"""
+            
+            response = client.models.generate_content(
+                model='gemini-2.5-pro',
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    temperature=0.3,
+                    max_output_tokens=2000,
+                    response_modalities=["TEXT"],
+                )
+            )
+            
+            result_text = response.text.strip()
+            
+            # 移除 markdown 格式
+            if result_text.startswith('```json'):
+                result_text = result_text[7:]
+            if result_text.startswith('```'):
+                result_text = result_text[3:]
+            if result_text.endswith('```'):
+                result_text = result_text[:-3]
+            result_text = result_text.strip()
+            
+            try:
+                stock_data = json.loads(result_text)
+                if 'events' in stock_data and isinstance(stock_data['events'], list):
+                    for event in stock_data['events']:
+                        # 轉換為 StockEvent 格式
+                        event_type = 'corporate'
+                        if event.get('type') == 'earnings':
+                            event_type = 'corporate'
+                        
+                        all_events.append({
+                            "id": f"watchlist-{stock}-{event.get('date', '')}",
+                            "date": event.get('date', ''),
+                            "title": f"{stock} {event.get('title', '')}",
+                            "market": "TW",
+                            "type": event_type,
+                            "trend": "neutral",
+                            "relatedStocks": [stock],
+                            "description": event.get('description', ''),
+                            "strategy": "關注該事件對股價的影響。"
+                        })
+            except json.JSONDecodeError:
+                # 如果解析失敗，跳過這個股票
+                continue
+        
+        return {"events": all_events}
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"搜尋失敗: {str(e)}")
+
 @app.get("/health")
 def health_check():
     """健康檢查端點"""
