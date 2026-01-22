@@ -1,210 +1,181 @@
 [
   {
-    "id": "0122-中信金法說",
-    "date": "2026-01-22",
-    "title": "中信金線上法說",
-    "market": "TW",
-    "type": "corporate",
+    "id": "0127-FOMC會議",
+    "date": "2026-01-27",
+    "title": "FOMC利率會議",
+    "market": "US",
+    "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "中信金 (2891)"
-    ],
-    "description": "中信金參加Goldman Sachs舉辦之線上法說會。",
-    "strategy": "關注法說會內容，評估對中信金後續營運影響。"
+    "relatedStocks": [],
+    "description": "聯準會FOMC會議，決定是否調整利率。",
+    "strategy": "關注聯準會對經濟及通膨的看法。"
   },
   {
-    "id": "0128-聯亞法說",
+    "id": "0128-FOMC利率決議",
     "date": "2026-01-28",
-    "title": "聯亞線上法說",
-    "market": "TW",
-    "type": "corporate",
+    "title": "FOMC利率決議",
+    "market": "US",
+    "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "聯亞 (3081)"
-    ],
-    "description": "聯亞參加元大證券舉辦之線上法說會。",
-    "strategy": "關注法說會內容，評估對聯亞後續營運影響。"
+    "relatedStocks": [],
+    "description": "聯準會公布利率決議，關注是否升息或降息。",
+    "strategy": "分析聯準會決策對全球股市及匯市的影響。"
   },
   {
     "id": "0129-蘋果財報",
     "date": "2026-01-29",
-    "title": "Apple Q1財報",
+    "title": "蘋果公布財報",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "Apple (AAPL)"
     ],
-    "description": "蘋果公布2026財年Q1財報，市場預期營收破1380億美元。",
-    "strategy": "關注iPhone銷售、服務事業及AI布局。"
+    "description": "蘋果公布2026財年Q1財報，關注iPhone銷售及服務收入。",
+    "strategy": "分析財報數據，判斷蘋果股價走勢。"
   },
   {
-    "id": "0129-FOMC會議",
-    "date": "2026-01-29",
-    "title": "FOMC利率決議",
-    "market": "US",
-    "type": "critical",
+    "id": "0130-台達電法說",
+    "date": "2026-01-30",
+    "title": "台達電法說會",
+    "market": "TW",
+    "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "美股大盤"
+      "台達電 (2308)"
     ],
-    "description": "聯準會FOMC會議，公布利率決議及政策聲明。",
-    "strategy": "關注聯準會對未來升息或降息的態度。"
+    "description": "台達電舉行法說會，說明營運狀況及未來展望。",
+    "strategy": "關注台達電對電動車及能源產業的看法。"
   },
   {
-    "id": "0220-台灣PMI",
+    "id": "0202-台灣PMI",
     "date": "2026-02-02",
-    "title": "台灣製造業PMI",
+    "title": "台灣1月PMI公布",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "整體台股"
-    ],
-    "description": "台灣1月PMI數據公布，觀察製造業景氣。",
-    "strategy": "PMI數據反映製造業動能，影響台股表現。"
+    "relatedStocks": [],
+    "description": "關注台灣製造業PMI數據，反映經濟景氣狀況。",
+    "strategy": "觀察數據是否優於預期，判斷對台股的影響。"
   },
   {
-    "id": "0202-AMD財報",
+    "id": "0103-AMD財報",
     "date": "2026-02-03",
-    "title": "AMD Q4財報",
+    "title": "AMD公布財報",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
       "AMD (AMD)"
     ],
-    "description": "AMD公布2025 Q4財報，預期營收96.53億美元。",
-    "strategy": "關注資料中心、PC及遊戲業務表現。"
+    "description": "AMD公布2025Q4財報，關注營收、獲利及未來展望。",
+    "strategy": "分析財報數據，判斷AMD股價走勢。"
   },
   {
-    "id": "0203-台灣外銷訂單",
+    "id": "0203-AMD財報",
     "date": "2026-02-03",
-    "title": "台灣外銷訂單公布",
-    "market": "TW",
-    "type": "critical",
+    "title": "AMD公布財報",
+    "market": "US",
+    "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "整體台股"
+      "AMD (AMD)"
     ],
-    "description": "台灣12月外銷訂單金額公布，觀察出口動能。",
-    "strategy": "外銷訂單數據反映全球需求，影響台股表現。"
+    "description": "AMD公布2025Q4財報，關注營收、獲利及未來展望。",
+    "strategy": "分析財報數據，判斷AMD股價走勢。"
   },
   {
-    "id": "0205-台灣央行會議",
+    "id": "0204-聯發科法說",
+    "date": "2026-02-04",
+    "title": "聯發科法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "neutral",
+    "relatedStocks": [
+      "聯發科 (2454)"
+    ],
+    "description": "聯發科舉行法說會，說明營運狀況及未來展望。",
+    "strategy": "關注聯發科對手機晶片及AI的看法。"
+  },
+  {
+    "id": "0205-日月光法說",
     "date": "2026-02-05",
-    "title": "台灣央行利率會議",
+    "title": "日月光法說會",
     "market": "TW",
-    "type": "critical",
+    "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "整體台股"
+      "日月光投控 (3711)"
     ],
-    "description": "台灣央行舉行利率會議，決定是否調整利率。",
-    "strategy": "關注央行對台灣經濟及通膨的看法。"
+    "description": "日月光舉行法說會，說明營運狀況及未來展望。",
+    "strategy": "關注日月光對先進封裝及CoWoS的看法。"
   },
   {
-    "id": "0213-美國非農",
+    "id": "0206-美國非農",
     "date": "2026-02-06",
-    "title": "美國非農就業數據",
+    "title": "美國非農就業",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "美股大盤"
-    ],
-    "description": "美國1月非農就業數據公布，觀察就業市場變化。",
-    "strategy": "非農數據影響聯準會政策，留意市場反應。"
+    "relatedStocks": [],
+    "description": "美國公布非農就業數據，觀察勞動市場狀況。",
+    "strategy": "分析非農數據對聯準會貨幣政策的影響。"
   },
   {
-    "id": "0209-台灣CPI",
-    "date": "2026-02-09",
-    "title": "台灣CPI公布",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "整體台股"
-    ],
-    "description": "台灣1月CPI年增率公布，觀察通膨是否持續趨緩。",
-    "strategy": "CPI數據影響央行貨幣政策，關注對股市資金流動性影響。"
-  },
-  {
-    "id": "0210-美國PPI",
-    "date": "2026-02-10",
-    "title": "美國PPI數據",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "美股大盤"
-    ],
-    "description": "美國1月PPI數據公布，觀察生產者物價。",
-    "strategy": "PPI數據影響通膨預期，留意市場反應。"
-  },
-  {
-    "id": "0210-美國CPI",
+    "id": "0213-美國CPI",
     "date": "2026-02-13",
-    "title": "美國CPI數據",
+    "title": "美國1月CPI公布",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "美股大盤"
-    ],
-    "description": "美國1月CPI數據公布，觀察通膨走勢。",
-    "strategy": "CPI數據影響聯準會政策，留意市場反應。"
+    "relatedStocks": [],
+    "description": "美國1月消費者物價指數公布，觀察通膨狀況。",
+    "strategy": "分析CPI數據對聯準會貨幣政策的影響。"
   },
   {
-    "id": "0215-台灣GDP",
-    "date": "2026-02-15",
-    "title": "台灣Q4 GDP公布",
+    "id": "0216-台灣CPI",
+    "date": "2026-02-16",
+    "title": "台灣1月CPI公布",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "整體台股"
-    ],
-    "description": "台灣公布2025年Q4 GDP數據，評估經濟成長狀況。",
-    "strategy": "GDP數據影響市場對經濟前景的看法。"
-  },
-  {
-    "id": "0215-台灣外銷訂單",
-    "date": "2026-02-15",
-    "title": "台灣外銷訂單公布",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [
-      "整體台股"
-    ],
-    "description": "台灣1月外銷訂單金額公布，觀察出口動能。",
-    "strategy": "外銷訂單數據反映全球需求，影響台股表現。"
+    "relatedStocks": [],
+    "description": "台灣1月消費者物價指數公布，觀察通膨狀況。",
+    "strategy": "分析CPI數據對央行貨幣政策的影響。"
   },
   {
     "id": "0225-輝達財報",
     "date": "2026-02-25",
-    "title": "NVIDIA Q4財報",
+    "title": "NVIDIA公布財報",
     "market": "US",
     "type": "corporate",
-    "trend": "bull",
+    "trend": "neutral",
     "relatedStocks": [
       "NVIDIA (NVDA)"
     ],
-    "description": "NVIDIA公布2026財年Q4財報，預期營收654.7億美元。",
-    "strategy": "關注AI晶片需求及資料中心業務。"
+    "description": "NVIDIA公布2026財年Q4財報，關注營收、獲利及未來展望。",
+    "strategy": "分析財報數據，判斷NVIDIA股價走勢。"
   },
   {
-    "id": "0228-台灣政府政策",
-    "date": "2026-02-28",
-    "title": "政府產業政策",
-    "market": "TW",
-    "type": "hot",
+    "id": "0226-美國GDP",
+    "date": "2026-02-26",
+    "title": "美國Q4 GDP公布",
+    "market": "US",
+    "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "特定產業股"
-    ],
-    "description": "政府可能公布新的產業扶植政策。",
-    "strategy": "關注政策方向，尋找受惠產業及個股。"
+    "relatedStocks": [],
+    "description": "美國公布Q4 GDP數據，評估經濟成長力道。",
+    "strategy": "分析GDP數據對股市及產業的影響。"
+  },
+  {
+    "id": "0227-台灣GDP",
+    "date": "2026-02-27",
+    "title": "台灣Q4 GDP修正",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣公布Q4 GDP修正值，評估經濟成長力道。",
+    "strategy": "分析GDP數據對股市及產業的影響。"
   }
 ]
