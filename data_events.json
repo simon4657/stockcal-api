@@ -1,73 +1,75 @@
 [
   {
-    "id": "0127-FOMC",
-    "date": "2026-01-27",
-    "title": "FOMC會議",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "美國聯準會FOMC會議，討論利率政策。",
-    "strategy": "關注會後聲明，判斷升息或降息可能。"
-  },
-  {
-    "id": "0128-FOMC利率決議",
-    "date": "2026-01-28",
-    "title": "FOMC利率決議公布",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "FOMC公布利率決議，主席召開記者會。",
-    "strategy": "關注利率變動、經濟展望。"
-  },
-  {
-    "id": "0129-Apple財報",
+    "id": "0129-蘋果財報",
     "date": "2026-01-29",
-    "title": "Apple公布財報",
+    "title": "蘋果公布財報",
     "market": "US",
-    "type": "corporate",
-    "trend": "neutral",
+    "type": "critical",
+    "trend": "bull",
     "relatedStocks": [
       "Apple (AAPL)"
     ],
-    "description": "Apple公布財報，並舉行電話會議。",
-    "strategy": "關注營收、獲利、產品展望。"
+    "description": "蘋果公司將於美東時間1月29日盤後公布2026財年第一季財報。",
+    "strategy": "高度關注財報數據，影響科技股走勢。"
   },
   {
-    "id": "0130-美國GDP",
-    "date": "2026-01-30",
-    "title": "美國GDP公布",
+    "id": "0129-FOMC會議",
+    "date": "2026-01-29",
+    "title": "FOMC利率決議",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國公布GDP數據，反映經濟成長狀況。",
-    "strategy": "分析GDP年增率，評估美股走勢。"
+    "description": "美國聯準會FOMC會議，公布利率決議。",
+    "strategy": "關注利率決策，影響全球金融市場。"
   },
   {
-    "id": "0202-PMI",
-    "date": "2026-02-02",
-    "title": "台灣製造業PMI公布",
+    "id": "0130-台灣GDP",
+    "date": "2026-01-30",
+    "title": "台灣GDP公布",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣2月製造業PMI數據公布，反映經濟擴張或收縮速度。",
-    "strategy": "關注PMI是否高於50，判斷台股趨勢。"
+    "description": "台灣公布GDP數據，反映經濟成長狀況。",
+    "strategy": "關注GDP數據，評估經濟情勢。"
   },
   {
     "id": "0203-AMD財報",
     "date": "2026-02-03",
     "title": "AMD公布財報",
     "market": "US",
-    "type": "corporate",
-    "trend": "neutral",
+    "type": "critical",
+    "trend": "bull",
     "relatedStocks": [
       "AMD (AMD)"
     ],
-    "description": "AMD公布財報，並舉行電話會議。",
-    "strategy": "關注營收、獲利、產品展望。"
+    "description": "AMD將於2月3日公布2025年第四季及全年財報。",
+    "strategy": "關注財報數據，影響科技股走勢。"
+  },
+  {
+    "id": "0203-美國非農",
+    "date": "2026-02-03",
+    "title": "美國非農數據",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "美國公布非農就業數據，反映就業市場狀況。",
+    "strategy": "關注非農數據，影響聯準會貨幣政策。"
+  },
+  {
+    "id": "0204-聯發科法說",
+    "date": "2026-02-04",
+    "title": "聯發科法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "bull",
+    "relatedStocks": [
+      "聯發科 (2454)"
+    ],
+    "description": "聯發科舉行法說會，公布Q4財報及2026年展望。",
+    "strategy": "關注法說會內容，影響IC設計類股走勢。"
   },
   {
     "id": "0205-日月光法說",
@@ -75,12 +77,23 @@
     "title": "日月光法說會",
     "market": "TW",
     "type": "corporate",
-    "trend": "neutral",
+    "trend": "bull",
     "relatedStocks": [
-      "日月光 (3711)"
+      "日月光投控 (3711)"
     ],
     "description": "日月光投控舉行2025年第四季法人說明會。",
-    "strategy": "關注先進封裝、AI相關業務。"
+    "strategy": "關注法說會內容，留意封測產業趨勢。"
+  },
+  {
+    "id": "0210-台灣CPI",
+    "date": "2026-02-10",
+    "title": "台灣CPI公布",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣公布CPI數據，反映通貨膨脹狀況。",
+    "strategy": "關注CPI數據，評估物價情勢。"
   },
   {
     "id": "0212-美國CPI",
@@ -90,66 +103,66 @@
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "美國公布CPI數據，反映通膨狀況。",
-    "strategy": "關注CPI年增率，判斷聯準會政策。"
+    "description": "美國公布CPI數據，反映通貨膨脹狀況。",
+    "strategy": "關注CPI數據，影響聯準會貨幣政策。"
   },
   {
-    "id": "0215-台灣CPI",
+    "id": "0215-台灣外銷訂單",
     "date": "2026-02-15",
-    "title": "台灣CPI公布",
+    "title": "台灣外銷訂單公布",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣公布CPI數據，反映通膨狀況。",
-    "strategy": "關注CPI年增率，判斷央行政策。"
+    "description": "台灣公布外銷訂單數據，反映出口貿易狀況。",
+    "strategy": "關注外銷訂單數據，評估經濟情勢。"
   },
   {
-    "id": "0215-聯發科",
-    "date": "2026-02-15",
-    "title": "聯發科股價",
-    "market": "TW",
-    "type": "hot",
-    "trend": "bull",
-    "relatedStocks": [
-      "聯發科 (2454)"
-    ],
-    "description": "聯發科股價上漲，市場看好。",
-    "strategy": "關注聯發科後續走勢。"
-  },
-  {
-    "id": "0220-外銷訂單",
-    "date": "2026-02-20",
-    "title": "台灣1月外銷訂單公布",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "台灣1月外銷訂單金額公布，觀察出口動能。",
-    "strategy": "分析訂單年增率，評估電子股表現。"
-  },
-  {
-    "id": "0226-NVIDIA財報",
-    "date": "2026-02-26",
-    "title": "NVIDIA財報",
+    "id": "0224-蘋果股東會",
+    "date": "2026-02-24",
+    "title": "蘋果年度股東會",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "NVIDIA (NVDA)"
+      "Apple (AAPL)"
     ],
-    "description": "NVIDIA公布財報，並舉行電話會議。",
-    "strategy": "關注營收、獲利、產品展望。"
+    "description": "蘋果公司舉行2026年度股東會。",
+    "strategy": "關注股東會內容，可能影響股價。"
   },
   {
-    "id": "0227-台央行",
-    "date": "2026-02-27",
-    "title": "台灣央行利率會議",
+    "id": "0225-NVIDIA財報",
+    "date": "2026-02-25",
+    "title": "NVIDIA公布財報",
+    "market": "US",
+    "type": "critical",
+    "trend": "bull",
+    "relatedStocks": [
+      "NVIDIA (NVDA)"
+    ],
+    "description": "NVIDIA將於2月25日公布2026財年第四季財報。",
+    "strategy": "高度關注財報數據，影響科技股走勢。"
+  },
+  {
+    "id": "0226-台灣PMI",
+    "date": "2026-02-26",
+    "title": "台灣PMI公布",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣央行舉行利率會議，討論利率政策。",
-    "strategy": "關注會後聲明，判斷升息或降息可能。"
+    "description": "台灣公布PMI數據，反映製造業景氣狀況。",
+    "strategy": "關注PMI數據，評估經濟情勢。"
+  },
+  {
+    "id": "0228-台灣失業率",
+    "date": "2026-02-28",
+    "title": "台灣失業率公布",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣公布失業率數據，反映就業市場狀況。",
+    "strategy": "關注失業率數據，評估經濟情勢。"
   }
 ]
