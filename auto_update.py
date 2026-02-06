@@ -95,7 +95,7 @@ def generate_hot_trends(client):
 
     try:
         response = client.models.generate_content(
-            model='gemini-2.0-flash-exp',
+            model='gemini-2.0-flash',
             contents=prompt,
             config=types.GenerateContentConfig(
                 temperature=0.7,
@@ -126,7 +126,7 @@ def generate_strategies(client):
 
     try:
         response = client.models.generate_content(
-            model='gemini-2.0-flash-exp',
+            model='gemini-2.0-flash',
             contents=prompt,
             config=types.GenerateContentConfig(
                 temperature=0.7,
@@ -198,7 +198,7 @@ JSON 格式（必須包含所有欄位）：
     try:
         log("正在呼叫 Gemini API（使用 Google Search）...")
         response = client.models.generate_content(
-            model='gemini-2.0-flash-exp',
+            model='gemini-2.0-flash',
             contents=prompt,
             config=types.GenerateContentConfig(
                 temperature=0.4,
