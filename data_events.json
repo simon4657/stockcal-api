@@ -1,176 +1,156 @@
 [
   {
-    "id": "0213-美國CPI",
-    "date": "2026-02-13",
-    "title": "美國1月CPI公布",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "關注美國1月消費者物價指數，評估通膨壓力與聯準會貨幣政策走向。",
-    "strategy": "若CPI超預期，留意升息預期升溫；反之，則有利股市。"
-  },
-  {
     "id": "0225-NVIDIA財報",
     "date": "2026-02-25",
-    "title": "NVIDIA Q4財報",
+    "title": "NVIDIA公布財報",
     "market": "US",
     "type": "corporate",
     "trend": "bull",
     "relatedStocks": [
       "NVIDIA (NVDA)"
     ],
-    "description": "市場高度關注NVIDIA財報，預期營收將持續成長，AI晶片需求強勁.",
-    "strategy": "偏多操作，留意財報指引與中國市場銷售狀況。"
+    "description": "NVIDIA 預計公布財報. 市場關注中國市場營收、2027 財年指引.",
+    "strategy": "留意財報數據、未來展望、股價波動。"
   },
   {
     "id": "0225-NVIDIA財報",
     "date": "2026-02-25",
-    "title": "NVIDIA Q4財報",
+    "title": "NVIDIA公布財報",
     "market": "US",
     "type": "corporate",
     "trend": "bull",
     "relatedStocks": [
       "NVIDIA (NVDA)"
     ],
-    "description": "NVIDIA預計發布Q4財報，市場關注AI晶片需求和中國市場銷售情況.",
-    "strategy": "觀察財報數據，若優於預期則偏多看待。"
+    "description": "NVIDIA 預計公布財報. 市場關注中國市場營收、2027 財年指引.",
+    "strategy": "留意財報數據、未來展望、股價波動。"
   },
   {
-    "id": "0226-台達電法說",
+    "id": "0210-台達電法說",
     "date": "2026-02-26",
-    "title": "台達電Q4法說會",
+    "title": "台達電舉行2026法說會",
     "market": "TW",
     "type": "corporate",
     "trend": "bull",
     "relatedStocks": [
       "台達電 (2308)"
     ],
-    "description": "台達電法說會聚焦AI資料中心布局，市場關注高毛利產品放量與費用率下滑.",
-    "strategy": "偏多操作，關注AI資料中心相關營收貢獻。"
+    "description": "台達電將舉行法說會，公布 2025 Q4 財報及 2026 年展望. AI 資料中心布局為焦點.",
+    "strategy": "關注 AI 伺服器電源、水冷散熱等業務展望。"
   },
   {
-    "id": "0226-美國GDP",
+    "id": "0226-台達電法說",
     "date": "2026-02-26",
-    "title": "美國Q4 GDP公布",
-    "market": "US",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "關注美國第四季GDP數據，評估經濟成長動能與衰退風險。",
-    "strategy": "若GDP優於預期，有利股市；反之，則可能引發避險情緒。"
+    "title": "台達電舉行2026法說會",
+    "market": "TW",
+    "type": "corporate",
+    "trend": "bull",
+    "relatedStocks": [
+      "台達電 (2308)"
+    ],
+    "description": "台達電將舉行法說會，公布 2025 Q4 財報及 2026 年展望. AI 資料中心布局為焦點.",
+    "strategy": "關注 AI 伺服器電源、水冷散熱等業務展望。"
   },
   {
-    "id": "0227-台灣央行會議",
-    "date": "2026-02-27",
-    "title": "台灣央行利率決策",
+    "id": "0301-台灣PMI",
+    "date": "2026-03-01",
+    "title": "台灣2月PMI公佈",
     "market": "TW",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "台灣央行公布利率決策，關注是否調整利率與對經濟前景的看法。",
-    "strategy": "若升息，不利股市；若維持利率不變，則有利股市。"
+    "description": "台灣 2 月份採購經理人指數 (PMI) 公布，觀察製造業景氣.",
+    "strategy": "留意 PMI 數據對台股的影響。"
   },
   {
-    "id": "0303-台灣PMI",
-    "date": "2026-03-03",
-    "title": "台灣2月PMI公布",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "關注台灣2月製造業PMI數據，評估經濟景氣狀況。",
-    "strategy": "若PMI高於50，表示經濟擴張；若低於50，表示經濟收縮。"
-  },
-  {
-    "id": "0303-美國PMI",
-    "date": "2026-03-03",
-    "title": "美國2月PMI公布",
+    "id": "0301-美國PMI",
+    "date": "2026-03-02",
+    "title": "美國2月PMI公佈",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "關注美國2月製造業PMI數據，評估經濟景氣狀況。",
-    "strategy": "若PMI高於50，表示經濟擴張；若低於50，表示經濟收縮。"
+    "description": "美國 2 月份採購經理人指數 (PMI) 公布，觀察製造業景氣。",
+    "strategy": "留意 PMI 數據對美股的影響。"
   },
   {
-    "id": "0305-美國利率",
+    "id": "0305-鴻海營收",
     "date": "2026-03-05",
-    "title": "美國利率",
-    "market": "US",
-    "type": "critical",
+    "title": "鴻海2月營收公佈",
+    "market": "TW",
+    "type": "corporate",
     "trend": "neutral",
-    "relatedStocks": [],
-    "description": "關注美國利率，評估聯準會貨幣政策走向.",
-    "strategy": "觀察利率變化，評估對股市影響。"
+    "relatedStocks": [
+      "鴻海 (2317)"
+    ],
+    "description": "鴻海公布 2 月份營收.",
+    "strategy": "關注營收數據，評估營運狀況。"
   },
   {
-    "id": "0306-美國非農",
-    "date": "2026-03-06",
+    "id": "0305-美國非農",
+    "date": "2026-03-07",
     "title": "美國2月非農就業",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "關注美國2月非農就業數據，評估勞動市場狀況與聯準會政策。",
-    "strategy": "若就業數據強勁，可能引發升息預期；反之，則有利股市。"
+    "description": "美國 2 月份非農就業數據公布，觀察勞動市場。",
+    "strategy": "留意非農數據對聯準會貨幣政策的影響。"
   },
   {
-    "id": "0310-台灣就業",
-    "date": "2026-03-10",
-    "title": "台灣就業",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "關注台灣就業，評估台灣就業市場狀況。",
-    "strategy": "觀察就業變化，評估對股市影響。"
-  },
-  {
-    "id": "0312-台灣外銷訂單",
+    "id": "0310-美國CPI",
     "date": "2026-03-12",
-    "title": "台灣2月外銷訂單",
-    "market": "TW",
-    "type": "critical",
-    "trend": "neutral",
-    "relatedStocks": [],
-    "description": "關注台灣2月外銷訂單數據，評估出口狀況與經濟前景。",
-    "strategy": "若外銷訂單成長，有利股市；反之，則可能引發擔憂。"
-  },
-  {
-    "id": "0313-美國PPI",
-    "date": "2026-03-13",
-    "title": "美國2月PPI公布",
+    "title": "美國2月CPI公佈",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "關注美國2月生產者物價指數，評估通膨壓力。",
-    "strategy": "若PPI超預期，留意升息預期升溫；反之，則有利股市。"
+    "description": "美國 2 月份消費者物價指數 (CPI) 公布，觀察通膨變化。",
+    "strategy": "留意 CPI 數據對聯準會貨幣政策的影響。"
+  },
+  {
+    "id": "0317-FOMC會議",
+    "date": "2026-03-17",
+    "title": "FOMC 利率會議",
+    "market": "US",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "聯準會 (Fed) 舉行 FOMC 利率會議. 可能發布經濟預測和利率點陣圖.",
+    "strategy": "關注利率決議、會後聲明、經濟預測。"
   },
   {
     "id": "0318-FOMC會議",
     "date": "2026-03-18",
-    "title": "FOMC利率決策",
+    "title": "FOMC 利率會議",
     "market": "US",
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "聯準會公布利率決策，關注是否調整利率與對經濟前景的看法.",
-    "strategy": "若升息，不利股市；若維持利率不變，則有利股市。"
+    "description": "聯準會 (Fed) 舉行 FOMC 利率會議. 可能發布經濟預測和利率點陣圖.",
+    "strategy": "關注利率決議、會後聲明、經濟預測。"
   },
   {
-    "id": "0320-英業達法說",
+    "id": "0315-台灣外銷訂單",
     "date": "2026-03-20",
-    "title": "英業達法說會",
+    "title": "台灣2月外銷訂單公佈",
     "market": "TW",
-    "type": "corporate",
+    "type": "critical",
     "trend": "neutral",
-    "relatedStocks": [
-      "英業達 (2356)"
-    ],
-    "description": "英業達參加BofA Securities 2026 Asia Tech Conference，說明公司營運概況.",
-    "strategy": "關注法說會內容，評估公司未來展望。"
+    "relatedStocks": [],
+    "description": "台灣 2 月份外銷訂單金額公布，觀察出口表現。",
+    "strategy": "留意外銷訂單數據對經濟的影響。"
+  },
+  {
+    "id": "0320-台灣央行會議",
+    "date": "2026-03-20",
+    "title": "台灣央行利率會議",
+    "market": "TW",
+    "type": "critical",
+    "trend": "neutral",
+    "relatedStocks": [],
+    "description": "台灣央行舉行利率會議，決定是否調整利率。",
+    "strategy": "關注利率決議、總裁談話。"
   },
   {
     "id": "0331-台灣GDP",
@@ -180,20 +160,20 @@
     "type": "critical",
     "trend": "neutral",
     "relatedStocks": [],
-    "description": "關注台灣Q1 GDP預估值，評估經濟成長狀況。",
-    "strategy": "若GDP優於預期，有利股市；反之，則可能引發擔憂。"
+    "description": "台灣公布 Q1 GDP 預估值，觀察經濟成長.",
+    "strategy": "留意 GDP 數據對股市的影響。"
   },
   {
     "id": "0430-Apple財報",
     "date": "2026-04-30",
-    "title": "Apple財報",
+    "title": "蘋果公布第二季財務報告",
     "market": "US",
     "type": "corporate",
     "trend": "neutral",
     "relatedStocks": [
-      "Apple (AAPL)"
+      "蘋果 (AAPL)"
     ],
-    "description": "Apple預計發布財報，關注iPhone銷售和新產品進展.",
-    "strategy": "觀察財報數據，評估消費電子市場需求。"
+    "description": "蘋果公布第二季財務報告",
+    "strategy": "留意營運概況。"
   }
 ]
